@@ -131,10 +131,10 @@ def quick_run(SMILES: str, mol_id: int = 0):
 
 
         if flexFlag:
-            rigid = "receptor = ../data/receptor.pdbqt\n"
-            flex_rec = "flex = ../data/receptor_flex.pdbqt\n"
+            rigid = "receptor = MCR_Agent/data/receptor.pdbqt\n"
+            flex_rec = "flex = MCR_Agent/data/receptor_flex.pdbqt\n"
         else:
-            rigid = "receptor = ../data/receptor.pdbqt\n"
+            rigid = "receptor = MCR_Agent/data/receptor.pdbqt\n"
             flex_rec = ""
 
         with open('config', 'w') as f:
@@ -317,7 +317,7 @@ def dock_and_get_interacting_residues(smiles: str):
   replace_string = f"obabel -ipdbqt {output} -osdf -O {output.replace('pdbqt','sdf')}"
   subprocess.run(replace_string, shell=True)
   ligand_file = output.replace('pdbqt', 'sdf')
-  protein_file = '../data/receptor.pdb'
+  protein_file = 'MCR_Agent/data/receptor.pdb'
 
   pro = next(oddt.toolkit.readfile('pdb',protein_file))
   lig = next(oddt.toolkit.readfile('sdf',ligand_file))

@@ -1,0 +1,130 @@
+MODEL 1
+REMARK VINA RESULT:      -3.1      0.000      0.000
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1       6.608  -1.313 -18.679  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1       8.360  -0.469 -18.647  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1       6.497  -2.723 -20.013  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1       6.056  -1.923 -16.919  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL
+MODEL 2
+REMARK VINA RESULT:      -3.1      0.009      2.793
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1       6.604  -1.317 -18.685  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1       6.500  -2.727 -20.018  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1       6.053  -1.930 -16.924  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1       8.351  -0.466 -18.652  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL
+MODEL 3
+REMARK VINA RESULT:      -3.1      0.034      2.783
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1       6.602  -1.336 -18.689  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1       6.057  -1.918 -16.916  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1       8.354  -0.492 -18.678  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1       6.487  -2.768 -19.999  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL
+MODEL 4
+REMARK VINA RESULT:      -2.8      5.646      6.853
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1       4.454  -1.675 -24.641  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1       5.185  -2.000 -22.869  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1       2.564  -1.220 -24.582  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1       5.493  -0.367 -25.634  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL
+MODEL 5
+REMARK VINA RESULT:      -2.8      5.657      6.706
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1       4.461  -1.673 -24.656  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1       5.498  -0.361 -25.647  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1       5.186  -1.991 -22.880  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1       2.570  -1.228 -24.607  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL
+MODEL 6
+REMARK VINA RESULT:      -2.7     13.574     14.915
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1      -1.672  -9.826 -27.026  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1      -3.242  -9.147 -27.949  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1      -1.174 -11.604 -27.636  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1      -0.182  -8.581 -27.100  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL
+MODEL 7
+REMARK VINA RESULT:      -2.7     13.575     14.842
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1      -1.673  -9.828 -27.027  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1      -0.183  -8.582 -27.100  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1      -3.243  -9.151 -27.952  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1      -1.173 -11.605 -27.636  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL
+MODEL 8
+REMARK VINA RESULT:      -2.7     13.677     14.641
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1      -2.736  -0.657 -28.979  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1      -2.265   0.932 -27.964  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1      -4.182  -1.657 -28.149  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1      -3.100  -0.254 -30.845  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL
+MODEL 9
+REMARK VINA RESULT:      -2.7     13.672     14.640
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1      -2.734  -0.655 -28.975  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1      -4.182  -1.651 -28.145  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1      -3.098  -0.251 -30.842  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1      -2.260   0.934 -27.961  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL
+MODEL 10
+REMARK VINA RESULT:      -2.7     13.571     14.962
+REMARK SMILES BrC(Br)Br
+REMARK SMILES IDX 2 1 1 2 3 3 4 4
+REMARK H PARENT
+ROOT
+ATOM      1  C   UNL     1      -1.671  -9.823 -27.025  1.00  0.00     0.191 C 
+ATOM      2  Br  UNL     1      -1.178 -11.601 -27.636  1.00  0.00    -0.064 Br
+ATOM      3  Br  UNL     1      -0.177  -8.581 -27.100  1.00  0.00    -0.064 Br
+ATOM      4  Br  UNL     1      -3.240  -9.139 -27.945  1.00  0.00    -0.064 Br
+ENDROOT
+TORSDOF 0
+ENDMDL

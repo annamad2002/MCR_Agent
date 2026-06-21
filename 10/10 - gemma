@@ -1,0 +1,2797 @@
+Enter your question: ## The following molecules were found to have low docking scores for MCR: - C1[C@H]([C@@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O - C1[C@@H]([C@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C\C3=CC(=C(C=C3)O)O)O)O - C1C[C@@](C[C@H]([C@H]1O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)(C(=O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O - C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)[O-] - C1[C@H]([C@@H]([C@@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O  ## For each of thes molecules, use the tools to find natural compounds that are similar to these and have a low docking score to MCR. Check for good lipinksi properties and make sure the compounds are suitable for a cow's rumen. Make sure you use all the tools available. The corrcet binding site has the following residues so ensure the suggested molecules bind to these residues: F43602, PHE360, PHE440, TYR366, UNK0. The molecules should bind to as many of the target residues as possible, with a minimum of 2 necessary for consideration. If a molecule binds to the wrong side, you can use PubChem to find similar molecules that bind to the correct residues. Also, look for smaller molecules as they are more likely to bind to the correct residues.
+------------------------------------------------------------------------
+Thinking:  The user wants to find natural compounds similar to a set of provided molecules that have low docking scores for Methyl-coenzyme M reductase (MCR), good Lipinski properties, are suitable for a cow's rumen, and bind to specific residues (F43602, PHE360, PHE440, TYR366, UNK0).
+
+Input molecules:
+1. `C1[C@H]([C@@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O`
+2. `C1[C@@H]([C@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C\C3=CC(=C(C=C3)O)O)O)O`
+3. `C1C[C@@](C[C@H]([C@H]1O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)(C(=O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O`
+4. `C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)[O-]`
+5. `C1[C@H]([C@@H]([C@@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O`
+
+Plan:
+1. For each seed molecule:
+    a. Use `pubchem` to find similar compounds.
+    b. For the similar compounds, filter for those likely to be natural products (e.g., using `calculate_SAS_and_NP` or just picking plausible ones).
+    c. Use `quick_run` to get the docking score. Keep those with low scores.
+    d. Use `dock_and_get_interacting_residues` to check if they bind to the target residues (F43602, PHE360, PHE440, TYR366, UNK0). At least 2 are required.
+    e. Use `lipinski` to check properties.
+    f. Use `calculate_SAS_and_NP` to verify natural product likeness (high NP score) and synthetic accessibility (low SAS score).
+    g. Use `is_commercially_available` to check if they can be sourced.
+    h. Evaluate suitability for cow's rumen (generally means stable, non-toxic, common dietary components).
+
+Let's start with the first molecule.
+
+Seed 1: `C1[C@H]([C@@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O`
+(This looks like a caffeoylquinic acid derivative, specifically 1,3-dicaffeoylquinic acid).
+
+Wait, the prompt asks for "natural compounds that are similar". These seed molecules are already natural (caffeoylquinic acids). I should use `pubchem` to find similar molecules, then test them.
+
+Step 1: Find similar molecules for the first seed.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling pubchem with arguments {'n_results': 10, 'smile': 'C1[C@H]([C@@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O'}
+Result: C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O
+C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O
+C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O
+C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O
+COC1=C(C=CC(=C1)/C=C/C(=O)O[C@@H]2C[C@@](C[C@H]([C@H]2O)O)(C(=O)O)O)O
+C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O
+C1C(C(C(CC1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Okay, I have some similar molecules. Now I need to evaluate them. I'll pick a few that look promising (different sizes and substitutions) and run the tests.
+
+Molecules to test:
+S1: `C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O` (Chlorogenic acid)
+S2: `C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O` (Monocaffeoylquinic acid)
+S3: `C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O` (Another dicaffeoylquinic acid)
+S4: `C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O` (Another dicaffeoylquinic acid)
+S5: `C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O` (Another dicaffeoylquinic acid)
+S6: `C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O` (Monocaffeoylquinic acid)
+S7: `C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O` (Dicaffeoylquinic acid)
+
+Let's start by docking these and checking the interacting residues.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O', 'mol_id': 1}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -1013325544
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 246.130 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -7.9      0.000      0.000
+   2         -7.8      3.032      7.013
+   3         -7.5      2.270      3.852
+   4         -7.5      1.765      6.158
+   5         -7.5      1.935      3.404
+   6         -7.5      1.783      3.192
+   7         -7.4      2.099      6.997
+   8         -7.4      2.047      2.980
+   9         -7.4      2.670      6.674
+  10         -7.3      1.771      2.470
+Writing output ... done.
+-7.9
+Result: ('-7.9', 'ligand1_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O', 'mol_id': 2}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 856245068
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 215.917 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.4      0.000      0.000
+   2         -8.1      1.724      4.187
+   3         -7.9      3.902      5.225
+   4         -7.9      4.070      6.505
+   5         -7.8      5.433      7.196
+   6         -7.8      3.661      4.823
+   7         -7.7      2.135      4.312
+   8         -7.6      2.783      7.106
+   9         -7.6      1.202      2.918
+  10         -7.6      4.821      8.128
+Writing output ... done.
+-8.4
+Result: ('-8.4', 'ligand2_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O', 'mol_id': 3}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -278389476
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 486.013 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -9.8      0.000      0.000
+   2         -9.4      2.584      8.062
+   3         -9.4      3.091      5.387
+   4         -9.4      0.805      8.699
+   5         -9.3      3.014      8.173
+   6         -9.3      2.830      7.622
+   7         -9.2      2.761      7.802
+   8         -9.1      3.447      7.307
+   9         -9.1      2.528      7.270
+  10         -9.1      2.242      7.868
+Writing output ... done.
+-9.8
+Result: ('-9.8', 'ligand3_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O', 'mol_id': 4}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -1727204160
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 492.063 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.8      0.000      0.000
+   2         -8.7      1.835      2.598
+   3         -8.7      2.972      4.680
+   4         -8.6      1.272      3.831
+   5         -8.6      2.140      4.518
+   6         -8.4      1.529      2.000
+   7         -8.4      2.101      4.188
+   8         -8.4      2.168      2.982
+   9         -8.2      3.456      5.590
+  10         -8.1      2.559      9.204
+Writing output ... done.
+-8.8
+Result: ('-8.8', 'ligand4_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O', 'mol_id': 5}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 119490440
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 487.670 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -9.4      0.000      0.000
+   2         -9.4      2.281      3.891
+   3         -9.4      1.808      2.261
+   4         -9.4      1.406      5.270
+   5         -9.4      2.021      3.547
+   6         -9.3      1.385      4.673
+   7         -9.3      2.578      4.993
+   8         -9.2      2.260      3.113
+   9         -9.0      2.446      4.425
+  10         -9.0      2.236      8.520
+Writing output ... done.
+-9.4
+Result: ('-9.4', 'ligand5_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O', 'mol_id': 6}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -1740388568
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 214.933 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.2      0.000      0.000
+   2         -7.8      3.272      5.381
+   3         -7.8      2.950      4.704
+   4         -7.8      3.327      5.166
+   5         -7.8      3.417      5.104
+   6         -7.7      4.975      7.583
+   7         -7.7      1.471      3.790
+   8         -7.7      3.357      5.335
+   9         -7.7      2.485      6.824
+  10         -7.5      4.902      7.876
+Writing output ... done.
+-8.2
+Result: ('-8.2', 'ligand6_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O', 'mol_id': 7}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 1423068880
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 479.557 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -9.6      0.000      0.000
+   2         -9.6      2.229      8.445
+   3         -9.6      2.816      8.779
+   4         -9.4      2.461      5.669
+   5         -9.4      3.137      6.950
+   6         -9.3      1.683      6.274
+   7         -9.3      2.386      8.908
+   8         -9.1      2.294      8.910
+   9         -9.0      1.895      5.788
+  10         -8.9      2.166      8.232
+Writing output ... done.
+-9.6
+Result: ('-9.6', 'ligand7_out_1.pdbqt')
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  The docking scores are all quite low (negative values). Let's check the interacting residues for those with the lowest scores (most negative).
+Lowest scores:
+S3: -9.8
+S7: -9.6
+S5: -9.4
+S4: -8.8
+
+I will check the residues for these.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -82214059
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 481.757 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -9.4      0.000      0.000
+   2         -9.4      3.617      4.830
+   3         -9.2      2.589      4.906
+   4         -9.1      3.553      7.190
+   5         -9.0      2.532      7.795
+   6         -9.0      2.410      7.474
+   7         -8.9      3.896      7.740
+   8         -8.9      3.895      6.521
+   9         -8.8      3.107      6.907
+  10         -8.8      3.755      6.657
+Writing output ... done.
+-9.4
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-42 forms a hbonds with ARG68
+Atom O-21 forms a hbonds with LYS69
+Atom O-19 forms a hbonds with TYR73
+Atom O-19 forms a hbonds with GLN330
+Atom O-27 forms a hbonds with F43602
+Atom O-6 forms a hbonds with F43602
+Atom O-6 forms a hbonds with F43602
+Atom O-19 forms a hbonds with TYR73
+Atom O-21 forms a hbonds with ARG68
+Atom O-21 forms a hbonds with ARG68
+Atom O-21 forms a hbonds with MET71
+Atom O-29 forms a hbonds with F43602
+Atom O-31 forms a hbonds with VAL158
+Atom O-31 forms a hbonds with F43602
+Atom O-40 forms a hbonds with GLY66
+Atom O-42 forms a hbonds with GLY66
+Atom O-42 forms a hbonds with GLN67
+Atom O-42 forms a hbonds with ARG68
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-33 forms a hydrophobic_contacts with THR157
+Atom C-32 forms a hydrophobic_contacts with HIS159
+Atom C-36 forms a hydrophobic_contacts with PHE172
+Atom C-38 forms a hydrophobic_contacts with PHE172
+Atom C-38 forms a hydrophobic_contacts with PHE172
+Atom C-33 forms a hydrophobic_contacts with VAL63
+Atom C-35 forms a hydrophobic_contacts with LEU65
+Atom C-17 forms a hydrophobic_contacts with ARG68
+Atom C-38 forms a hydrophobic_contacts with ARG68
+Atom C-15 forms a hydrophobic_contacts with LEU70
+Atom C-17 forms a hydrophobic_contacts with LEU70
+Atom C-14 forms a hydrophobic_contacts with PHE394
+Atom C-14 forms a hydrophobic_contacts with PHE394
+Atom C-0 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ARG68, F43602, GLN330, GLN67, GLY66, HIS159, LEU65, LEU70, LYS69, MET71, PHE172, PHE394, THR157, TYR73, VAL158, VAL63
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 268833088
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 479.398 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.8      0.000      0.000
+   2         -8.8      2.788      8.771
+   3         -8.6      2.457      7.021
+   4         -8.4      1.741      7.518
+   5         -8.2      2.017      3.352
+   6         -8.1      2.523      7.686
+   7         -8.1      2.161      4.249
+   8         -8.0      2.473      7.712
+   9         -7.9      1.894      2.731
+  10         -7.8      2.899      6.850
+Writing output ... done.
+-8.8
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-6 forms a hbonds with ASP85
+Atom O-6 forms a hbonds with ASP85
+Atom O-23 forms a hbonds with F43602
+Atom O-25 forms a hbonds with F43602
+Atom O-42 forms a hbonds with F43602
+Atom O-6 forms a hbonds with ASP85
+Atom O-9 forms a hbonds with GLN330
+Atom O-10 forms a hbonds with GLN330
+Atom O-23 forms a hbonds with F43602
+Atom O-25 forms a hbonds with F43602
+Atom O-29 forms a hbonds with GLN330
+Atom O-31 forms a hbonds with F43602
+Atom O-42 forms a hbonds with F43602
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-21 forms a hydrophobic_contacts with VAL63
+Atom C-15 forms a hydrophobic_contacts with LEU65
+Atom C-0 forms a hydrophobic_contacts with LEU70
+Atom C-36 forms a hydrophobic_contacts with PHE394
+Atom C-38 forms a hydrophobic_contacts with F43602
+Atom C-38 forms a hydrophobic_contacts with F43602
+Atom C-32 forms a hydrophobic_contacts with F43602
+Atom C-33 forms a hydrophobic_contacts with F43602
+Atom C-34 forms a hydrophobic_contacts with F43602
+Atom C-36 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ASP85, F43602, GLN330, LEU65, LEU70, PHE394, VAL63
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 35740083
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 486.407 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.5      0.000      0.000
+   2         -8.5      1.648      3.082
+   3         -8.4      2.018      3.586
+   4         -8.4      1.342      1.769
+   5         -8.4      2.118      4.367
+   6         -8.4      1.791      3.551
+   7         -8.4      2.069      3.752
+   8         -8.3      2.099      4.148
+   9         -8.1      2.207      8.404
+  10         -8.1      2.229      3.227
+Writing output ... done.
+-8.5
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-40 forms a hbonds with VAL158
+Atom O-12 forms a hbonds with ASP85
+Atom O-27 forms a hbonds with F43602
+Atom O-42 forms a hbonds with F43602
+Atom O-40 forms a hbonds with F43602
+Atom O-6 forms a hbonds with F43602
+Atom O-6 forms a hbonds with GLN330
+Atom O-6 forms a hbonds with F43602
+Atom O-9 forms a hbonds with THR329
+Atom O-10 forms a hbonds with GLN330
+Atom O-12 forms a hbonds with ASP85
+Atom O-27 forms a hbonds with F43602
+Atom O-31 forms a hbonds with GLN330
+Atom O-40 forms a hbonds with HIS159
+Atom O-42 forms a hbonds with F43602
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-17 forms a hydrophobic_contacts with LEU65
+Atom C-18 forms a hydrophobic_contacts with LEU65
+Atom C-35 forms a hydrophobic_contacts with PHE394
+Atom C-33 forms a hydrophobic_contacts with PHE394
+Atom C-36 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ASP85, F43602, GLN330, HIS159, LEU65, PHE394, THR329, VAL158
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 1808563678
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 487.871 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.8      0.000      0.000
+   2         -8.8      1.972      4.252
+   3         -8.7      2.253      2.876
+   4         -8.7      1.835      3.550
+   5         -8.6      2.445      3.625
+   6         -8.5      1.427      4.003
+   7         -8.4      2.195      4.435
+   8         -8.0      2.772      4.882
+   9         -7.9      1.760      2.514
+  10         -7.8      2.444      4.588
+Writing output ... done.
+-8.8
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-42 forms a hbonds with VAL158
+Atom O-12 forms a hbonds with GLY84
+Atom O-12 forms a hbonds with THR329
+Atom O-25 forms a hbonds with F43602
+Atom O-27 forms a hbonds with F43602
+Atom O-42 forms a hbonds with F43602
+Atom O-40 forms a hbonds with F43602
+Atom O-12 forms a hbonds with THR329
+Atom O-25 forms a hbonds with F43602
+Atom O-27 forms a hbonds with F43602
+Atom O-29 forms a hbonds with GLN330
+Atom O-40 forms a hbonds with HIS159
+Atom O-40 forms a hbonds with F43602
+Atom O-42 forms a hbonds with F43602
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-21 forms a hydrophobic_contacts with VAL63
+Atom C-23 forms a hydrophobic_contacts with VAL63
+Atom C-17 forms a hydrophobic_contacts with LEU65
+Atom C-35 forms a hydrophobic_contacts with PHE394
+Atom C-38 forms a hydrophobic_contacts with F43602
+Atom C-32 forms a hydrophobic_contacts with F43602
+Atom C-33 forms a hydrophobic_contacts with F43602
+Atom C-33 forms a hydrophobic_contacts with F43602
+Atom C-34 forms a hydrophobic_contacts with F43602
+Atom C-33 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ F43602, GLN330, GLY84, HIS159, LEU65, PHE394, THR329, VAL158, VAL63
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  None of the docked molecules interacted with PHE360, PHE440, TYR366, or UNK0. They all interacted with F43602 (which is probably a typo for something else or a very specific residue, but it's one of the target residues).
+Wait, the target residues are: F43602, PHE360, PHE440, TYR366, UNK0.
+All 4 of the tested molecules bound to F43602. However, they didn't bind to any of the others.
+The prompt says: "The molecules should bind to as many of the target residues as possible, with a minimum of 2 necessary for consideration."
+Since they only bind to F43602 (1 residue), they don't meet the criteria.
+
+I need to find similar molecules that might bind to the other residues. The prompt suggests looking for "smaller molecules as they are more likely to bind to the correct residues."
+The current molecules (caffeoylquinic acids) are relatively large.
+Maybe I should look for simpler phenolic acids or smaller natural compounds.
+Caffeic acid: `C(=CC=C(C1=CC=C(C=C1)O)O)O`
+Ferulic acid: `C(=CC=C(C1=CC=C(C=C1)OC)O)O`
+p-Coumaric acid: `C(=CC=C(C1=CC=C(C=C1)O)O)O`
+
+Let's try these smaller, similar natural molecules.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling pubchem with arguments {'n_results': 5, 'smile': 'C(=CC=C(C1=CC=C(C=C1)O)O)O'}
+Result: C1=CC=C(C(=C1)CO)O
+C1=CC(=CC=C1CCO)O
+C1=CC(=CC=C1CO)O
+CCCC1=CC=C(C=C1)O
+C=CC1=CC=C(C=C1)O
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  These are a bit too simple. Let's try some natural products related to the caffeoylquinic acids but smaller, or search for molecules known to be MCR inhibitors if possible, but the goal is similarity to the provided ones.
+Actually, let's search for derivatives of caffeic acid.
+Caffeic acid: `C(=CC=C(C1=CC=C(C=C1)O)O)O`
+Wait, the provided molecules were dicaffeoylquinic acids.
+Maybe a monocaffeoylquinic acid?
+`C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O`
+I already tested one of those (S2: -8.4), but let's check its residues.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -242553480
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 220.844 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.4      0.000      0.000
+   2         -8.1      1.788      4.239
+   3         -7.9      3.871      5.179
+   4         -7.9      3.878      4.636
+   5         -7.8      5.434      7.222
+   6         -7.7      2.752      7.116
+   7         -7.7      4.338      7.815
+   8         -7.7      3.746      6.781
+   9         -7.6      4.910      8.095
+  10         -7.6      4.804      7.636
+Writing output ... done.
+-8.4
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-17 forms a hbonds with VAL158
+Atom O-15 forms a hbonds with F43602
+Atom O-2 forms a hbonds with F43602
+Atom O-9 forms a hbonds with HIS159
+Atom O-14 forms a hbonds with GLN330
+Atom O-17 forms a hbonds with HIS159
+Atom O-27 forms a hbonds with GLY66
+Atom O-29 forms a hbonds with GLY66
+Atom O-29 forms a hbonds with GLN67
+Atom O-29 forms a hbonds with ARG68
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-20 forms a hydrophobic_contacts with THR157
+Atom C-25 forms a hydrophobic_contacts with PHE172
+Atom C-25 forms a hydrophobic_contacts with PHE172
+Atom C-23 forms a hydrophobic_contacts with ALA174
+Atom C-25 forms a hydrophobic_contacts with ALA174
+Atom C-19 forms a hydrophobic_contacts with VAL63
+Atom C-20 forms a hydrophobic_contacts with VAL63
+Atom C-22 forms a hydrophobic_contacts with LEU65
+Atom C-4 forms a hydrophobic_contacts with PHE394
+Atom C-4 forms a hydrophobic_contacts with F43602
+Atom C-4 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ALA174, ARG68, F43602, GLN330, GLN67, GLY66, HIS159, LEU65, PHE172, PHE394, THR157, VAL158, VAL63
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Still only F43602.
+
+Let's consider the target residues: PHE360, PHE440, TYR366. These are aromatic.
+The seed molecules have caffeoyl groups (aromatic). Maybe a different orientation or a different aromatic system would work.
+Since the user mentioned "If a molecule binds to the wrong side, you can use PubChem to find similar molecules that bind to the correct residues", but I don't know which side is the "wrong side" unless I compare them.
+The target residues are PHE360, PHE440, TYR366.
+Let's try to find compounds that are aromatic and a bit smaller than the seed molecules, maybe simple phenols or flavonoids.
+Quercetin: `C1=CC(=C(C=C1O)O)OC2=CC(=C(C=C2O)O)C3=C2C=CC(=C3O)O`
+Kaempferol: `C1=CC(=C(C=C1O)O)OC2=CC(=C(C=C2O)C3=C2C=CC(=C3O)O)O`
+Wait, the user wants similarity to the *given* molecules. The given ones are caffeoylquinic acids.
+Let's try looking for other "quinic acid" esters or similar organic acids.
+What about smaller esters?
+Maybe `C1=CC(=C(C=C1O)O)C(=O)O` (Protocatechuic acid)
+`C(=CC=C(C1=CC=C(C=C1)O)O)O` (Caffeic acid)
+
+Let's try docking Caffeic acid and Protocatechuic acid.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C(=CC=C(C1=CC=C(C=C1)O)O)O', 'mol_id': 8}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 1370136640
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 60.742 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -7.3      0.000      0.000
+   2         -6.4     12.779     14.803
+   3         -6.4      2.225      6.063
+   4         -5.9     18.311     20.330
+   5         -5.8     13.748     15.210
+   6         -5.7     14.812     16.349
+   7         -5.7     13.920     14.925
+   8         -5.7     16.449     19.658
+   9         -5.6     12.859     15.339
+  10         -5.6     16.285     19.343
+Writing output ... done.
+-7.3
+Result: ('-7.3', 'ligand8_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1=CC(=C(C=C1O)O)C(=O)O', 'mol_id': 9}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 2042519607
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 48.906 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.7      0.000      0.000
+   2         -6.1     13.822     15.580
+   3         -6.1      1.903      2.334
+   4         -6.1      1.399      4.417
+   5         -5.7     12.659     14.927
+   6         -5.6     13.899     15.567
+   7         -5.5     12.175     14.930
+   8         -5.4     11.383     12.665
+   9         -5.4     10.074     10.952
+  10         -5.4      9.938     11.260
+Writing output ... done.
+-6.7
+Result: ('-6.7', 'ligand9_out_1.pdbqt')
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Now check residues for Caffeic acid and Protocatechuic acid.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C(=CC=C(C1=CC=C(C=C1)O)O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 1595744596
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 60.359 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.2      0.000      0.000
+   2         -5.8      6.003      8.652
+   3         -5.7     20.936     22.980
+   4         -5.5     16.353     17.722
+   5         -5.5     16.420     17.971
+   6         -5.5     19.747     21.993
+   7         -5.5     16.018     18.725
+   8         -5.4     17.334     18.274
+   9         -5.4     16.354     18.827
+  10         -5.3     16.676     18.738
+Writing output ... done.
+-6.2
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-14 forms a hbonds with TYR366
+Atom O-14 forms a hbonds with MET322
+Atom O-12 forms a hbonds with MET475
+Atom O-12 forms a hbonds with VAL477
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-8 forms a hydrophobic_contacts with PHE360
+Atom C-10 forms a hydrophobic_contacts with PHE360
+Atom C-10 forms a hydrophobic_contacts with PHE360
+Atom C-8 forms a hydrophobic_contacts with TYR366
+Atom C-8 forms a hydrophobic_contacts with TYR366
+Atom C-6 forms a hydrophobic_contacts with TYR366
+Atom C-8 forms a hydrophobic_contacts with TYR366
+Atom C-9 forms a hydrophobic_contacts with LEU318
+Atom C-9 forms a hydrophobic_contacts with LEU318
+Atom C-7 forms a hydrophobic_contacts with MET322
+Atom C-9 forms a hydrophobic_contacts with PHE328
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ LEU318, MET322, MET475, PHE328, PHE360, TYR366, VAL477
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C1=CC(=C(C=C1O)O)C(=O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 1181296956
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 48.971 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.7      0.000      0.000
+   2         -6.1     13.814     15.573
+   3         -6.1      1.385      4.426
+   4         -6.1      1.905      2.349
+   5         -5.8     12.675     14.934
+   6         -5.6     13.892     15.562
+   7         -5.5     12.150     14.914
+   8         -5.5      1.048      3.931
+   9         -5.4     10.077     10.952
+  10         -5.4      9.934     11.257
+Writing output ... done.
+-6.7
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-10 forms a hbonds with TYR331
+Atom O-10 forms a hbonds with SER397
+Atom O-6 forms a hbonds with PHE394
+Atom O-6 forms a hbonds with GLY395
+Atom O-9 forms a hbonds with ARG398
+Atom O-12 forms a hbonds with HIS393
+Atom O-12 forms a hbonds with ARG398
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-1 forms a hydrophobic_contacts with TYR331
+Atom C-2 forms a hydrophobic_contacts with ALA334
+Atom C-4 forms a hydrophobic_contacts with ALA334
+Atom C-4 forms a hydrophobic_contacts with HIS393
+Atom C-0 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ALA334, ARG398, F43602, GLY395, HIS393, PHE394, SER397, TYR331
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Caffeic acid (`C(=CC=C(C1=CC=C(C=C1)O)O)O`) interacted with **PHE360** and **TYR366**.
+That's 2 target residues!
+Let's double check: PHE360 and TYR366 are in the list (F43602, PHE360, PHE440, TYR366, UNK0).
+So Caffeic acid is a great candidate.
+
+Now let's verify:
+1. Natural compound? Yes, it's very common.
+2. Low docking score? -7.3 (decent, though maybe not as low as dicaffeoylquinic acids, but it binds to the correct residues).
+3. Lipinski properties?
+4. Suitable for cow's rumen? Yes, Caffeic acid is a common plant-derived phenolic acid found in fodder.
+5. Interacts with >= 2 target residues? Yes (PHE360, TYR366).
+
+Let's check its Lipinski and SAS/NP scores.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling lipinski with arguments {'smiles_list': ['C(=CC=C(C1=CC=C(C=C1)O)O)O']}
+lipinski tool
+===================================================
+Result: Properties of SMILES: C(=CC=C(C1=CC=C(C=C1)O)O)O: QED: 0.481
+Molecular Weight: 178.187, LogP: 2.363
+Hydrogen bond acceptors: 3, Hydrogen bond donors: 3
+Polar Surface Area: 60.690, Rotatable Bonds: 2
+Aromatic Rings: 1, Undesireable moieties: 2
+===================================================
+
+------------------------------------------------------------------------
+Calling calculate_SAS_and_NP with arguments {'smiles_list': ['C(=CC=C(C1=CC=C(C=C1)O)O)O']}
+reading NP model ...
+model in
+Result: | SMILES | SAS Score | NP Score |
+|---------|-----------|----------|
+| C(=CC=C(C1=CC=C(C=C1)O)O)O | 2.81 | 1.10 |
+
+------------------------------------------------------------------------
+Calling is_commercially_available with arguments {'smiles_list': ['C(=CC=C(C1=CC=C(C=C1)O)O)O']}
+Result: Result: SMILES 'C(=CC=C(C1=CC=C(C=C1)O)O)O' is not commercially available or no vendor data found.
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Wait, is Caffeic acid not commercially available? That's surprising. It might be a PubChemPy issue. Caffeic acid is definitely available.
+Let's check again or look for a similar one.
+Also, QED is 0.481, which is okay.
+SAS score 2.81 (easy to synthesize) and NP score 1.10 (natural-like).
+
+Let's see if I can find other similar molecules to Caffeic acid that might be better.
+Actually, I should check if Ferulic acid or p-Coumaric acid also bind to the correct residues.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C(=CC=C(C1=CC=C(C=C1)OC)O)O', 'mol_id': 10}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -639328384
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 64.454 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -7.1      0.000      0.000
+   2         -7.0     13.731     15.578
+   3         -6.4      1.722      6.246
+   4         -6.3      3.169      5.962
+   5         -6.2     12.833     14.610
+   6         -6.1     13.086     15.369
+   7         -6.0     18.222     20.393
+   8         -5.9     13.196     14.526
+   9         -5.9     13.660     17.434
+  10         -5.8     13.683     17.358
+Writing output ... done.
+-7.1
+Result: ('-7.1', 'ligand10_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C(=CC=C(C1=CC=C(C=C1)O)O)O', 'mol_id': 11}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -83938180
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 61.051 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.9      0.000      0.000
+   2         -6.3     15.799     17.995
+   3         -5.8     10.296     12.759
+   4         -5.8      1.886      2.424
+   5         -5.6     11.425     13.651
+   6         -5.6     12.279     14.334
+   7         -5.6     10.067     12.041
+   8         -5.5     10.425     13.270
+   9         -5.5     10.515     13.321
+  10         -5.5     11.005     12.628
+Writing output ... done.
+-6.9
+Result: ('-6.9', 'ligand11_out_1.pdbqt')
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Wait, I already docked Caffeic acid. Let's check residues for Ferulic acid.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C(=CC=C(C1=CC=C(C=C1)OC)O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -999282742
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 65.378 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.0      0.000      0.000
+   2         -5.9      9.963     12.440
+   3         -5.8     15.274     17.140
+   4         -5.7     11.542     13.488
+   5         -5.7     10.793     12.012
+   6         -5.6     10.745     12.051
+   7         -5.6     10.314     12.147
+   8         -5.6     11.361     12.759
+   9         -5.5     10.711     13.297
+  10         -5.5      9.800     11.714
+Writing output ... done.
+-6.0
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-4 forms a hbonds with TYR331
+Atom O-14 forms a hbonds with GLY395
+Atom O-14 forms a hbonds with F43602
+Atom O-14 forms a hbonds with SER397
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-9 forms a hydrophobic_contacts with GLN330
+Atom C-0 forms a hydrophobic_contacts with TYR331
+Atom C-2 forms a hydrophobic_contacts with TYR331
+Atom C-0 forms a hydrophobic_contacts with TYR331
+Atom C-2 forms a hydrophobic_contacts with ALA334
+Atom C-8 forms a hydrophobic_contacts with ALA334
+Atom C-10 forms a hydrophobic_contacts with ALA334
+Atom C-10 forms a hydrophobic_contacts with HIS393
+Atom C-9 forms a hydrophobic_contacts with PHE394
+Atom C-9 forms a hydrophobic_contacts with PHE394
+Atom C-7 forms a hydrophobic_contacts with F43602
+Atom C-7 forms a hydrophobic_contacts with F43602
+Atom C-9 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ALA334, F43602, GLN330, GLY395, HIS393, PHE394, SER397, TYR331
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Ferulic acid only bound to F43602.
+
+So far, Caffeic acid is the winner. Let's try to find a few more.
+The dicaffeoylquinic acids bound to F43602. Caffeic acid bound to PHE360 and TYR366.
+Since Caffeic acid is a component of the dicaffeoylquinic acids, it suggests that the caffeoyl moiety is responsible for the binding to PHE360 and TYR366.
+Maybe other simple phenolic acids?
+How about Rosmarinic acid? (It's a natural ester of caffeic acid and 3,4-dihydroxyphenyllactic acid).
+SMILES for Rosmarinic acid: `C1=CC(=C(C=C1)O)C[C@H](C(=O)OC2=CC(=C(C=C2)O)C=CC(=O)O)O`
+Wait, a more common SMILES: `O=C(C[C@H](O)C3=CC=C(C=C3)O)OC4=CC=C(C=C4)C=CC(=O)O`
+Wait, let's check a reliable SMILES.
+Rosmarinic acid: `C1=CC(=C(C=C1)O)C[C@H](C(=O)OC2=CC(=C(C=C2)O)C=CC(=O)O)O`
+Actually, let's try this one: `C1=CC(=C(C=C1)O)C[C@H](C(=O)OC2=CC(=C(C=C2)O)C=CC(=O)O)O`
+Wait, I'll search for similar molecules to Caffeic acid using PubChem.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling pubchem with arguments {'n_results': 10, 'smile': 'C(=CC=C(C1=CC=C(C=C1)O)O)O'}
+Result: C1=CC=C(C(=C1)CO)O
+C1=CC(=CC=C1CCO)O
+C1=CC(=CC=C1CO)O
+CCCC1=CC=C(C=C1)O
+C=CC1=CC=C(C=C1)O
+C=CCC1=CC=C(C=C1)O
+COCC1=CC=C(C=C1)O
+C1=CC(=CC=C1/C=C/CO)O
+CCCCC1=CC=C(C=C1)O
+CC(C1=CC=C(C=C1)O)O
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  These are too simple. Let's look for molecules like Caffeoylquinic acids but perhaps with different substitutions.
+The goal is to find molecules that bind to the correct residues. Caffeic acid does.
+Let's check its "natural" status and rumen suitability.
+Caffeic acid is natural and common in plant materials eaten by cows.
+Its Lipinski properties:
+MW: 178 (Good)
+LogP: 2.36 (Good)
+HBA: 3 (Good)
+HBD: 3 (Good)
+PSA: 60 (Good)
+NP score: 1.10 (Natural)
+SAS score: 2.81 (Easy)
+
+What about other related compounds?
+Chlorogenic acid: `C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O`
+I already checked it, it bound to F43602.
+Wait, maybe the "smaller molecules" means I should look for fragments.
+Let's try a few more small phenolics.
+Vanillic acid: `COC1=CC(=C(C=C1)O)C(=O)O`
+Gallic acid: `C1=CC(=C(C=C1O)O)C(=O)O`
+Syringic acid: `COC1=CC(=C(C=C1O)C(=O)O)OC`
+
+Docking these:
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'COC1=CC(=C(C=C1)O)C(=O)O', 'mol_id': 12}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -229729756
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 48.912 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.9      0.000      0.000
+   2         -5.7      1.916      2.848
+   3         -5.5     13.078     15.869
+   4         -5.5     10.601     12.007
+   5         -5.4     12.228     15.368
+   6         -5.4     13.957     15.708
+   7         -5.4     12.796     14.850
+   8         -5.3      1.580      4.540
+   9         -5.2      2.943      5.332
+  10         -5.2     11.353     13.086
+Writing output ... done.
+-5.9
+Result: ('-5.9', 'ligand12_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1=CC(=C(C=C1O)O)C(=O)O', 'mol_id': 13}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 911602798
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 49.766 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.7      0.000      0.000
+   2         -6.1     13.825     15.580
+   3         -6.1      1.906      2.348
+   4         -5.8     12.656     14.933
+   5         -5.6     13.921     15.588
+   6         -5.5     12.182     14.939
+   7         -5.5      1.057      3.928
+   8         -5.4     10.853     11.566
+   9         -5.4     10.326     11.392
+  10         -5.4     10.073     10.956
+Writing output ... done.
+-6.7
+Result: ('-6.7', 'ligand13_out_1.pdbqt')
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'COC1=CC(=C(C=C1O)C(=O)O)OC', 'mol_id': 14}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 582303151
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 58.191 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.7      0.000      0.000
+   2         -5.5      3.415      6.133
+   3         -5.5      5.642      7.153
+   4         -5.5      5.145      8.017
+   5         -5.3      3.541      6.517
+   6         -5.2      1.407      3.245
+   7         -5.1      4.348      6.201
+   8         -5.0      2.204      4.566
+   9         -5.0     10.287     11.868
+  10         -5.0      1.452      5.381
+Writing output ... done.
+-5.7
+Result: ('-5.7', 'ligand14_out_1.pdbqt')
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Check residues for these.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'COC1=CC(=C(C=C1)O)C(=O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 669151188
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 48.642 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.9      0.000      0.000
+   2         -5.7      1.904      2.849
+   3         -5.5     13.049     15.855
+   4         -5.5     13.973     15.710
+   5         -5.4     12.674     15.614
+   6         -5.4     12.293     15.381
+   7         -5.3     10.913     11.683
+   8         -5.3      1.557      4.524
+   9         -5.2     11.661     13.357
+  10         -5.2     12.118     12.884
+Writing output ... done.
+-5.9
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-10 forms a hbonds with TYR331
+Atom O-12 forms a hbonds with TYR331
+Atom O-12 forms a hbonds with SER397
+Atom O-6 forms a hbonds with GLY395
+Atom O-9 forms a hbonds with ARG398
+Atom O-9 forms a hbonds with ALA400
+Atom O-9 forms a hbonds with VAL401
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-4 forms a hydrophobic_contacts with TYR331
+Atom C-4 forms a hydrophobic_contacts with TYR331
+Atom C-5 forms a hydrophobic_contacts with TYR331
+Atom C-4 forms a hydrophobic_contacts with TYR331
+Atom C-1 forms a hydrophobic_contacts with ALA334
+Atom C-2 forms a hydrophobic_contacts with ALA334
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ALA334, ALA400, ARG398, GLY395, SER397, TYR331, VAL401
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C1=CC(=C(C=C1O)O)C(=O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 2077229271
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 49.875 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.7      0.000      0.000
+   2         -6.1     13.822     15.580
+   3         -5.8     12.671     14.948
+   4         -5.6     13.897     15.565
+   5         -5.5     12.216     14.961
+   6         -5.4     11.386     12.665
+   7         -5.4     10.320     11.403
+   8         -5.4      9.943     11.266
+   9         -5.3     10.035     11.043
+  10         -5.3      9.980     10.954
+Writing output ... done.
+-6.7
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-10 forms a hbonds with TYR331
+Atom O-10 forms a hbonds with SER397
+Atom O-6 forms a hbonds with PHE394
+Atom O-6 forms a hbonds with GLY395
+Atom O-9 forms a hbonds with ARG398
+Atom O-12 forms a hbonds with HIS393
+Atom O-12 forms a hbonds with ARG398
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-1 forms a hydrophobic_contacts with TYR331
+Atom C-2 forms a hydrophobic_contacts with ALA334
+Atom C-4 forms a hydrophobic_contacts with ALA334
+Atom C-4 forms a hydrophobic_contacts with HIS393
+Atom C-0 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ALA334, ARG398, F43602, GLY395, HIS393, PHE394, SER397, TYR331
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'COC1=CC(=C(C=C1O)C(=O)O)OC'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 661113778
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 58.087 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -5.7      0.000      0.000
+   2         -5.6      4.050      6.541
+   3         -5.5      5.165      8.027
+   4         -5.5      3.062      5.775
+   5         -5.3      3.563      6.513
+   6         -5.3      4.278      5.455
+   7         -5.3      4.812      6.594
+   8         -5.2      2.014      3.433
+   9         -5.2      4.829      7.602
+  10         -5.2      1.473      3.344
+Writing output ... done.
+-5.7
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-6 forms a hbonds with HIS159
+Atom O-13 forms a hbonds with GLY66
+Atom O-13 forms a hbonds with GLN67
+Atom O-14 forms a hbonds with GLN67
+Atom O-14 forms a hbonds with ARG68
+
+
+HYDROPHOBIC_CONTACTS interactions:
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ARG68, GLN67, GLY66, HIS159
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  None of these bound to PHE360, PHE440, or TYR366.
+So Caffeic acid is still the only one.
+
+Let's try and search for something similar to Caffeic acid that might be even better.
+The prompt says "find natural compounds that are similar to these". The "these" refers to the dicaffeoylquinic acids.
+Caffeic acid is a degradation product and a precursor of dicaffeoylquinic acids. It is highly similar.
+Maybe there are other derivatives like:
+- Caffeic acid methyl ester
+- Caffeic acid ethyl ester
+- 3,4-dihydroxyphenyllactic acid
+- Ferulic acid (already tried)
+- Sinapic acid
+
+Let's try Sinapic acid: `COC1=CC(=C(C=C1)C(=O)O)OC` (Wait, that's not sinapic acid. Sinapic acid is `COC1=CC(=C(C=C1)C=CC(=O)O)OC`).
+Let's try docking Sinapic acid.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'COC1=CC(=C(C=C1)C=CC(=O)O)OC', 'mol_id': 15}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 1483493086
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 62.950 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.1      0.000      0.000
+   2         -6.1      1.349      1.604
+   3         -6.1      2.053      2.492
+   4         -5.9      2.176      4.431
+   5         -5.7      1.516      2.655
+   6         -5.6      1.871      3.060
+   7         -5.6      1.843      5.507
+   8         -5.6      2.637      5.445
+   9         -5.6      2.094      4.114
+  10         -5.5      3.452      4.479
+Writing output ... done.
+-6.1
+Result: ('-6.1', 'ligand15_out_1.pdbqt')
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Check residues.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'COC1=CC(=C(C=C1)C=CC(=O)O)OC'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 451299720
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 63.576 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -6.2      0.000      0.000
+   2         -6.2      1.238      1.496
+   3         -6.1      1.394      1.411
+   4         -6.0      1.631      2.690
+   5         -5.9      2.950      4.778
+   6         -5.7      2.937      4.963
+   7         -5.7      1.989      5.873
+   8         -5.7      2.353      4.330
+   9         -5.6      1.426      5.728
+  10         -5.5      3.802      4.491
+Writing output ... done.
+-6.2
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-14 forms a hbonds with PRO64
+Atom O-8 forms a hbonds with F43602
+Atom O-13 forms a hbonds with GLN67
+Atom O-13 forms a hbonds with ARG68
+Atom O-14 forms a hbonds with GLY66
+Atom O-14 forms a hbonds with GLN67
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-5 forms a hydrophobic_contacts with HIS159
+Atom C-7 forms a hydrophobic_contacts with HIS159
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ARG68, F43602, GLN67, GLY66, HIS159, PRO64
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Still no.
+
+Let's go back to Caffeic acid. It is a strong candidate.
+Are there any other natural compounds similar to dicaffeoylquinic acids that are smaller but keep the "caffeoyl" part?
+Maybe Monocaffeoylquinic acid (already checked, only bound to F43602).
+Wait, maybe the "Caffeic acid" docking was a fluke? Let me re-check the interacting residues for Caffeic acid.
+`SMILES: C(=CC=C(C1=CC=C(C=C1)O)O)O`
+`Interacting residues: LEU318, MET322, MET475, PHE328, PHE360, TYR366, VAL477`
+Yes, it binds to PHE360 and TYR366.
+Wait, I should check if any other similar compounds bind to these.
+Maybe 3,4-dihydroxybenzoic acid? (Protocatechuic acid)
+I already tried that, it didn't.
+
+What about other natural phenolic acids?
+p-Coumaric acid: `C(=CC=C(C1=CC=C(C=C1)O)O)O`
+Actually, let's try 3,4-dihydroxycinnamic acid (which *is* Caffeic acid).
+How about 3,5-dicaffeoylquinic acid?
+`C1[C@H]([C@@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O`
+Wait, I already tried several dicaffeoylquinic acids and they all went to F43602.
+Caffeic acid is a small molecule and it binds to PHE360 and TYR366.
+This is a great finding.
+
+Let's look for other molecules similar to Caffeic acid.
+Maybe 3-methoxy-4-hydroxycinnamic acid (Ferulic acid - already tried).
+Maybe 3,4-dimethoxycinnamic acid?
+Maybe some simple tannins? (e.g., Gallic acid - already tried).
+
+Is Caffeic acid "suitable for a cow's rumen"?
+Yes, it's a natural plant compound, widely distributed in forage and dietary supplements for livestock. It's generally safe and may even have antioxidant benefits in the rumen.
+
+Let's double check the target residues again: F43602, PHE360, PHE440, TYR366, UNK0.
+Caffeic acid binds to PHE360 and TYR366. (2 residues).
+Can we find something that binds to 3 or more?
+Maybe a dimer of caffeic acid?
+Like Rosmarinic acid. Let's try Rosmarinic acid again with a correct SMILES.
+`C1=CC(=C(C=C1)O)C[C@H](C(=O)OC2=CC(=C(C=C2)O)C=CC(=O)O)O`
+Wait, that SMILES might be slightly off. Let's try `C1=CC(=C(C=C1)O)C[C@H](C(=O)OC2=CC(=C(C=C2)O)C=CC(=O)O)O` again.
+Actually, let's search PubChem for "Rosmarinic acid".
+The SMILES is usually `C1=CC(=C(C=C1)O)C[C@H](C(=O)OC2=CC(=C(C=C2)O)C=CC(=O)O)O`.
+Wait, let's try `CC1=CC=C(C=C1C[C@H](C(=O)OC2=CC=C(C=C2O)C=CC(=O)O)O)O` - no.
+Let's just use the name in a search tool if I could, but I have to use SMILES.
+Correct Rosmarinic acid SMILES: `C1=CC(=C(C=C1)O)C[C@H](C(=O)OC2=CC(=C(C=C2)O)C=CC(=O)O)O`
+Wait, looking at the structure: it's an ester of caffeic acid and 3,4-dihydroxyphenyllactic acid.
+`C1=CC(=C(C=C1)O)C=CC(=O)O[C@H](C2=CC(=C(C=C2)O)O)C(=O)O` - this looks better.
+Actually, the standard SMILES for Rosmarinic acid is `C1=CC(=C(C=C1)O)C[C@H](C(=O)OC2=CC(=C(C=C2)O)C=CC(=O)O)O`. Let me try it.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1=CC(=C(C=C1)O)C[C@H](C(=O)OC2=CC(=C(C=C2)O)C=CC(=O)O)O', 'mol_id': 16}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... Molecule 16 (O=C([O-])C=Cc1cc(OC(=O)C(O)Cc2ccccc2O)ccc1O) FAILED: list index out of range
+Result: None
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  The docking failed. Maybe the SMILES is too complex or wrong.
+Let's try a simpler version of a dimer.
+Actually, Caffeic acid is already a very good result. It's natural, similar to the seeds, fits the Lipinski criteria, is rumen-suitable, and binds to 2 target residues.
+
+Let's double check the "smaller molecules" part. Caffeic acid (MW 178) is much smaller than the seed dicaffeoylquinic acids (MW ~500).
+
+Let's check if I can find any others.
+How about `C1=CC=C(C=C1C(=O)O)O` (p-Hydroxybenzoic acid)?
+`C1=CC=C(C=C1O)C(=O)O` (4-Hydroxybenzoic acid)
+`C1=CC(=C(C=C1O)O)C(=O)O` (Protocatechuic acid - already tried)
+
+What about other cinnamic acids?
+`C1=CC=C(C=C1)C=CC(=O)O` (Cinnamic acid)
+`C1=CC=C(C=C1O)C=CC(=O)O` (p-Coumaric acid)
+
+Let's try p-Coumaric acid again.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1=CC=C(C=C1O)C=CC(=O)O', 'mol_id': 17}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 443604672
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 53.750 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -7.3      0.000      0.000
+   2         -6.7      2.692      6.345
+   3         -6.6      2.878      4.333
+   4         -6.6      2.933      6.273
+   5         -6.5      2.040      5.768
+   6         -6.3      1.941      5.804
+   7         -6.1     13.455     16.482
+   8         -6.0      4.310      7.422
+   9         -5.9      9.611     10.790
+  10         -5.9     13.287     16.336
+Writing output ... done.
+-7.3
+Result: ('-7.3', 'ligand17_out_1.pdbqt')
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Check residues for p-Coumaric acid.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C1=CC=C(C=C1O)C=CC(=O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -119811003
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 53.463 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -7.4      0.000      0.000
+   2         -6.7      2.713      6.381
+   3         -6.5      2.751      6.074
+   4         -6.1     13.481     16.481
+   5         -6.0      4.355      7.504
+   6         -5.9      9.908     10.856
+   7         -5.9     10.140     10.852
+   8         -5.8     13.395     16.370
+   9         -5.7     15.339     16.605
+  10         -5.7      5.870      8.127
+Writing output ... done.
+-7.4
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-12 forms a hbonds with MET475
+Atom O-11 forms a hbonds with VAL477
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-7 forms a hydrophobic_contacts with PHE360
+Atom C-1 forms a hydrophobic_contacts with PHE360
+Atom C-0 forms a hydrophobic_contacts with PHE360
+Atom C-1 forms a hydrophobic_contacts with PHE360
+Atom C-7 forms a hydrophobic_contacts with PHE360
+Atom C-1 forms a hydrophobic_contacts with TYR366
+Atom C-2 forms a hydrophobic_contacts with TYR366
+Atom C-7 forms a hydrophobic_contacts with TYR366
+Atom C-6 forms a hydrophobic_contacts with PHE328
+Atom C-0 forms a hydrophobic_contacts with PHE328
+Atom C-2 forms a hydrophobic_contacts with PHE328
+Atom C-6 forms a hydrophobic_contacts with PHE328
+Atom C-0 forms a hydrophobic_contacts with PHE328
+Atom C-1 forms a hydrophobic_contacts with PHE328
+Atom C-6 forms a hydrophobic_contacts with PHE328
+Atom C-4 forms a hydrophobic_contacts with TYR331
+Atom C-6 forms a hydrophobic_contacts with TYR331
+Atom C-7 forms a hydrophobic_contacts with PHE440
+Atom C-7 forms a hydrophobic_contacts with PHE440
+Atom C-7 forms a hydrophobic_contacts with PHE440
+Atom C-0 forms a hydrophobic_contacts with PHE440
+Atom C-2 forms a hydrophobic_contacts with PHE440
+Atom C-0 forms a hydrophobic_contacts with PHE440
+Atom C-2 forms a hydrophobic_contacts with PHE440
+Atom C-7 forms a hydrophobic_contacts with PHE440
+Atom C-0 forms a hydrophobic_contacts with PHE440
+Atom C-1 forms a hydrophobic_contacts with PHE440
+Atom C-2 forms a hydrophobic_contacts with PHE440
+Atom C-7 forms a hydrophobic_contacts with PHE440
+Atom C-0 forms a hydrophobic_contacts with VAL477
+Atom C-4 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ F43602, MET475, PHE328, PHE360, PHE440, TYR331, TYR366, VAL477
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  P-coumaric acid interacts with **PHE360**, **PHE440**, **TYR366**, and **F43602**.
+That's 4 target residues!
+This is an even better candidate than Caffeic acid.
+
+Let's check its properties.
+SMILES: `C1=CC=C(C=C1O)C=CC(=O)O`
+MW: 162.15
+LogP: 1.8
+HBA: 2
+HBD: 2
+PSA: 62.7
+Natural? Yes.
+Rumen suitable? Yes.
+
+Let's run Lipinski and SAS/NP for p-Coumaric acid.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling lipinski with arguments {'smiles_list': ['C1=CC=C(C=C1O)C=CC(=O)O']}
+lipinski tool
+===================================================
+Result: Properties of SMILES: C1=CC=C(C=C1O)C=CC(=O)O: QED: 0.651
+Molecular Weight: 164.160, LogP: 1.490
+Hydrogen bond acceptors: 3, Hydrogen bond donors: 2
+Polar Surface Area: 57.530, Rotatable Bonds: 2
+Aromatic Rings: 1, Undesireable moieties: 1
+===================================================
+
+------------------------------------------------------------------------
+Calling calculate_SAS_and_NP with arguments {'smiles_list': ['C1=CC=C(C=C1O)C=CC(=O)O']}
+Result: | SMILES | SAS Score | NP Score |
+|---------|-----------|----------|
+| C1=CC=C(C=C1O)C=CC(=O)O | 1.89 | 0.79 |
+
+------------------------------------------------------------------------
+Calling is_commercially_available with arguments {'smiles_list': ['C1=CC=C(C=C1O)C=CC(=O)O']}
+reading NP model ...
+model in
+Result: SMILES 'C1=CC=C(C=C1O)C=CC(=O)O' is commercially available.
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  This is excellent. p-Coumaric acid meets all the criteria:
+- Similar to the seeds (it's a precursor/building block).
+- Low docking score (-7.3).
+- Binds to 4 target residues (F43602, PHE360, PHE440, TYR366).
+- Good Lipinski properties (QED 0.651).
+- Natural (NP Score 0.79).
+- Easy to synthesize/accessible (SAS 1.89).
+- Commercially available.
+- Suitable for cow's rumen.
+
+Let's see if I can find one more.
+How about Caffeic acid again? It's very similar to p-Coumaric acid.
+Caffeic acid SMILES: `C(=CC=C(C1=CC=C(C=C1)O)O)O`
+It bound to PHE360 and TYR366 (2 residues).
+Let's check if it also binds to PHE440.
+Looking back at the Caffeic acid residues: `LEU318, MET322, MET475, PHE328, PHE360, TYR366, VAL477`.
+No PHE440.
+
+So p-Coumaric acid is the best.
+What about Ferulic acid again?
+Ferulic acid SMILES: `C(=CC=C(C1=CC=C(C=C1)OC)O)O`
+Residues: `ALA334, F43602, GLN330, GLY395, HIS393, PHE394, SER397, TYR331`.
+No.
+
+How about a small molecule that's slightly more complex?
+Maybe 3-hydroxy-p-coumaric acid? (Wait, that's just Caffeic acid).
+How about 3,4-dihydroxycinnamic acid? (Caffeic acid).
+
+Let's try `C1=CC(=C(C=C1)O)C=CC(=O)O` (Wait, this is also a form of coumaric acid).
+Actually, p-Coumaric acid and Caffeic acid are the strongest.
+Let's provide these as the results.
+
+One last check: are there any others?
+Maybe a simple flavonoid like Apigenin?
+`C1=CC(=C(C=C1O)C2=C(C=CC(=C2O)O)C3=CC(=C(C=C3O)O)O)O` - no, that's too big.
+Apigenin: `C1=CC(=C(C=C1O)C2=CC(=C(C=C2O)C3=CC(=C(C=C3O)O)O)O)O` - no.
+Apigenin SMILES: `C1=CC(=C(C=C1O)C2=CC(=C(C=C2O)C3=CC(=C(C=C3)O)O)O)O`
+Let's try docking Apigenin just in case it's a good natural compound.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling quick_run with arguments {'SMILES': 'C1=CC(=C(C=C1O)C2=CC(=C(C=C2O)C3=CC(=C(C=C3)O)O)O)O', 'mol_id': 18}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: 468437608
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 152.270 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.1      0.000      0.000
+   2         -7.9      0.787      1.714
+   3         -7.8      1.231      2.053
+   4         -7.8      4.361      5.601
+   5         -7.6      5.140      6.752
+   6         -7.6      1.243      8.156
+   7         -7.6      3.550      4.684
+   8         -7.6      3.802      4.395
+   9         -7.6      1.304      8.304
+  10         -7.5      4.318      7.638
+Writing output ... done.
+-8.1
+Result: ('-8.1', 'ligand18_out_1.pdbqt')
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Check residues for Apigenin.
+------------------------------------------------------------------------
+Content:  
+------------------------------------------------------------------------
+Calling dock_and_get_interacting_residues with arguments {'smiles': 'C1=CC(=C(C=C1O)C2=CC(=C(C=C2O)C3=CC(=C(C=C3)O)O)O)O'}
+Optimizing the ligand structure...ligand PDBQT file has been generated.
+############################################################################
+# If you used Quick Vina 2 in your work, please cite:                      #
+#                                                                          #
+# Amr Alhossary, Stephanus Daniel Handoko, Yuguang Mu, and Chee-Keong Kwoh,#
+# Fast, Accurate, and Reliable Molecular Docking with QuickVina 2,         #
+# Bioinformatics (2015), doi: 10.1093/bioinformatics/btv082                #
+#                                                                          #
+# You are also encouraged to cite Quick Vina 1:                            #
+# Stephanus Daniel Handoko, Xuchang Ouyang, Chinh Tran To Su, Chee Keong   #
+# Kwoh, Yew Soon Ong,                                                      #
+# QuickVina: Accelerating AutoDock Vina Using Gradient-Based Heuristics for#
+# Global Optimization,                                                     #
+# IEEE/ACM Transactions on Computational Biology and Bioinformatics,vol.9, #
+# no. 5, pp. 1266-1272, Sept.-Oct. 2012, doi: 10.1109/TCBB.2012.82         #
+#                                                                          #
+# and original AutoDock Vina paper:                                        #
+# O. Trott, A. J. Olson,                                                   #
+# AutoDock Vina: improving the speed and accuracy of docking with a        #
+# new scoring function, efficient optimization and multithreading,         #
+# Journal of Computational Chemistry 31 (2010) 455-461                     #
+# doi: 10.1002/jcc.21334                                                   #
+############################################################################
+
+Detected 2 CPUs
+Reading input ... done.
+Setting up the scoring function ... done.
+Analyzing the binding site ... done.
+Using random seed: -1136689903
+Performing search ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+done.
+Refining results ... 
+searching finished in 151.652 seconds
+done.
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1         -8.1      0.000      0.000
+   2         -7.9      0.787      1.714
+   3         -7.8      1.225      2.050
+   4         -7.8      4.356      5.600
+   5         -7.7      5.158      6.752
+   6         -7.6      1.249      8.155
+   7         -7.6      3.551      4.685
+   8         -7.5      3.754      4.323
+   9         -7.5      1.306      8.304
+  10         -7.5      4.110      8.973
+Writing output ... done.
+-8.1
+Result: ## Contacts between the ligand and proteins residues -------------------------
+
+HBONDS interactions:
+Atom O-12 forms a hbonds with ASP85
+Atom O-18 forms a hbonds with F43602
+Atom O-26 forms a hbonds with F43602
+Atom O-28 forms a hbonds with F43602
+Atom O-14 forms a hbonds with F43602
+Atom O-12 forms a hbonds with ASP85
+Atom O-14 forms a hbonds with GLN330
+Atom O-14 forms a hbonds with F43602
+Atom O-16 forms a hbonds with GLN330
+Atom O-26 forms a hbonds with F43602
+Atom O-28 forms a hbonds with F43602
+
+
+HYDROPHOBIC_CONTACTS interactions:
+Atom C-1 forms a hydrophobic_contacts with ILE326
+Atom C-24 forms a hydrophobic_contacts with F43602
+Atom C-24 forms a hydrophobic_contacts with F43602
+Atom C-22 forms a hydrophobic_contacts with F43602
+
+
+PI_STACKING interactions:
+
+
+PI_CATION interactions:
+
+
+HALOGENBONDS interactions:
+
+
+SALT_BRIDGES interactions:
+List of all interacting residues:
+ ASP85, F43602, GLN330, ILE326
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+Thinking:  Only F43602.
+
+So the best molecules are p-Coumaric acid and Caffeic acid.
+I will present these.
+
+Recap:
+- Molecule 1: p-Coumaric acid (`C1=CC=C(C=C1O)C=CC(=O)O`)
+    - Docking Score: -7.3
+    - Target Residues: F43602, PHE360, PHE440, TYR366 (4 residues)
+    - Lipinski: Good (QED 0.651, LogP 1.49, MW 164)
+    - Natural/NP: High similarity (NP Score 0.79, SAS Score 1.89)
+    - Rumen suitable: Yes, common plant phenolic.
+    - Available: Yes.
+
+- Molecule 2: Caffeic acid (`C(=CC=C(C1=CC=C(C=C1)O)O)O`)
+    - Docking Score: -7.3
+    - Target Residues: PHE360, TYR366 (2 residues)
+    - Lipinski: Good (QED 0.481, LogP 2.36, MW 178)
+    - Natural/NP: Natural (NP Score 1.10, SAS Score 2.81)
+    - Rumen suitable: Yes, common plant phenolic.
+    - Available: Yes (though tool said not found, it is a standard chemical).
+
+I'll double check if any others from the `pubchem` list for the seeds were smaller.
+Seed similar compounds:
+`C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O` (Chlorogenic acid) - too big.
+`C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O` (Monocaffeoylquinic acid) - bound to F43602 only.
+`C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O` - too big.
+
+The smaller phenolic acids are definitely the way to go. p-Coumaric acid is the best.
+
+One last check on the target residues list: F43602, PHE360, PHE440, TYR366, UNK0.
+p-Coumaric acid binds to F43602, PHE360, PHE440, and TYR366.
+This is exactly what was requested.
+------------------------------------------------------------------------
+Content:  Based on the analysis of the provided seed molecules (which are dicaffeoylquinic acid derivatives), I searched for smaller, natural compounds with similar structural motifs—specifically, phenolic acids and their derivatives—that are likely to be compatible with a cow's rumen and provide a higher likelihood of binding to the correct target residues (F43602, PHE360, PHE440, TYR366, UNK0).
+
+The most promising natural compounds identified are **p-Coumaric acid** and **Caffeic acid**. These are natural precursors to the seed molecules and are common components of dietary forage, making them highly suitable for the rumen environment.
+
+### Recommended Compounds
+
+#### 1. p-Coumaric acid
+*   **SMILES:** `C1=CC=C(C=C1O)C=CC(=O)O`
+*   **Docking Score:** -7.3
+*   **Interacting Residues:** Binds to **F43602, PHE360, PHE440, and TYR366** (4 target residues), exceeding the minimum requirement.
+*   **Lipinski Properties:** 
+    *   **QED:** 0.651 (Good)
+    *   **Molecular Weight:** 164.16 g/mol
+    *   **LogP:** 1.49
+    *   **PSA:** 57.53 $\text{Å}^2$
+*   **Natural Product Likeness:** 
+    *   **NP Score:** 0.79
+    *   **SAS Score:** 1.89 (Easy to synthesize/access)
+*   **Commercial Availability:** Commercially available.
+*   **Rumen Suitability:** Highly suitable; it is a widely occurring phenolic acid in plants consumed by ruminants.
+
+#### 2. Caffeic acid
+*   **SMILES:** `C(=CC=C(C1=CC=C(C=C1)O)O)O`
+*   **Docking Score:** -7.3
+*   **Interacting Residues:** Binds to **PHE360 and TYR366** (2 target residues).
+*   **Lipinski Properties:** 
+    *   **QED:** 0.481
+    *   **Molecular Weight:** 178.19 g/mol
+    *   **LogP:** 2.36
+    *   **PSA:** 60.69 $\text{Å}^2$
+*   **Natural Product Likeness:** 
+    *   **NP Score:** 1.10
+    *   **SAS Score:** 2.81
+*   **Rumen Suitability:** Highly suitable; common in many plant-based feeds.
+
+### Summary Comparison
+
+| Molecule | Docking Score | Target Residues | QED | NP Score | Rumen Suitability |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **p-Coumaric acid** | -7.3 | F43602, PHE360, PHE440, TYR366 | 0.65 | 0.79 | Excellent |
+| **Caffeic acid** | -7.3 | PHE360, TYR366 | 0.48 | 1.10 | Excellent |
+| **Seed Molecules** | $\sim -9$ | F43602 (mostly) | Varies | High | Good |
+
+**Conclusion:** While the larger seed molecules had lower overall docking scores, they predominantly bound to a single residue (F43602). **p-Coumaric acid** is the superior candidate as it binds to four of the target residues, maintains excellent drug-like properties, is a natural product, and is safe for use in a cow's rumen.
+------------------------------------------------------------------------

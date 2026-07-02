@@ -1,0 +1,2 @@
+Rank,SMILES,Docking_Score,Binding_Residues,Frequency,Commercial_Availability,QED,NP_Score,SAS_Score,MW,LogP,Prompt
+1,"CCCCC/C=C(\C)/C=O",,"| QED | NP Score | SAS Score | Availability |",1,"",0.651,,,,,12

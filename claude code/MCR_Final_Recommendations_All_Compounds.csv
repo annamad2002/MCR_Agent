@@ -1,0 +1,17 @@
+Rank,Category,SMILES,Compound_Name,Docking_Score,Binding_Residues,QED,NP_Score,SAS_Score,MW,LogP,Prompt
+1,Novel,C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O,,-9.9,,0.156,,,,1.03,7
+2,Novel,C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O,,-9.5,F43602,,1.35,3.83,,,9
+3,Novel,C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O,,-8.2,,0.234,,,,-0.65,7
+4,Novel,CC(C)=CCC(C)=CCC(C)O,**Geraniol**,-7.8,,,2.47,3.54,,,13
+5,Novel,CC(=CCC/C(=C/C=O)/C)C,**Citral**,-7.5,"PHE360, PHE440, TYR366",0.344,2.64,2.88,,,12
+6,Novel,C1=CC(=CC(=C1)O)/C=C/C(=O)O,**p-Coumaric acid**,-7.4,"F43602, PHE360, PHE440, TYR366",0.651,0.79,1.89,,,12
+7,Novel,C1=CC(=CC=C1C=CC)O,**p-Coumaryl alcohol**,-7.1,,,1.05,1.91,,,13
+8,Novel,C1=CC(=CC=C1/C=C/C(=O)O)O,**p-Coumaric acid**,-6.9,,,0.84,1.78,,,11
+9,Novel,NC(C(=O)O)CCS,**Homocysteine**,-4.6,,,1.32,3.09,,,11
+10,Novel,O=[N+]([O-])OCCCCc1ccc(C#N)cc1F,,,,0.432,,,,2.23,1
+11,Novel,O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1,,,,0.449,,,,3.24,1
+12,Novel,O=[N+]([O-])CCCCc1ccc(C(F)(F)F)cc1,,,,,,,,3.30,2
+13,Novel,O=[N+]([O-])CCCCc1ccc(C#N)cc1,,,,,,,,2.16,2
+14,Novel,O=[N+]([O-])c1ccc(C(F)(F)F)cc1,,,,,,,,,4
+15,Novel,O=[N+]([O-])c1ccc(C#N)cc1F,,,,,,,,,4
+16,Novel,C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O,,,,0.298,,,,1.76,8

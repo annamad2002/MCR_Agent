@@ -1,0 +1,29 @@
+Rank,SMILES,Compound_Name,Binding_Affinity_kcal_mol,Binding_Residues,Model,Prompt,Previously_Found
+1,CCCCCCCCCC(=O)O,Capric Acid,-7.6,"UNK0, F43602, TYR366, PHE440, PHE360",gemma - 2,12,True
+2,CC(=CCC/C(=C/C=O)/C)C,Citral,-7.4,"UNK0, F43602, TYR366, PHE440, PHE360",gemma - 3,12,True
+3,C1=CC(=CC=C1/C=C/C(=O)/C=C/C2=CC=C(C=C2)O)O,"(1E,4E)-1,5-bis(4-hydroxyphenyl)penta-1,4-dien-3-one",-9.1,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 3,13,False
+4,CC1=CC[C@H](CC1)C(=C)CCC=C(C)C,"(4S)-1-methyl-4-(6-methylhepta-1,5-dien-2-yl)cyclohexene",-9.0,"UNK0, F43602, TYR366, PHE440, PHE360",gemma - 2,12,False
+5,CC(=CCCC(=CCCC(=CC=O)C)C)C,,-7.9,"UNK0, F43602, TYR366, PHE440, PHE360",gemma - 2,12,False
+6,CCCCCCC=CC(=O)O,non-2-enoic acid,-7.9,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 4,13,False
+7,CC(C)=CCC(C)=CCC(C)O,PubChem CID: None,-7.8,"UNK0, F43602, TYR366, PHE440, PHE360",gemma,13,False
+8,CCOC(=O)/C=C/C1=CC(=C(C=C1)O)O,"ethyl (E)-3-(3,4-dihydroxyphenyl)prop-2-enoate",-7.7,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 2,13,False
+9,CCCCCCCCC(=O)O,nonanoic acid,-7.5,"UNK0, F43602, TYR366, PHE440, PHE360",gemma - 2,12,False
+10,CCCCC=CC(=O)O,hept-2-enoic acid,-7.5,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 4,13,False
+11,C1=CC(=CC(=C1)O)/C=C/C(=O)O,(E)-3-(3-hydroxyphenyl)prop-2-enoic acid,-7.4,"PHE360, PHE440, UNK0, F43602, TYR366",qwen,11,False
+12,CC(=O)C=CC1=CC=C(C=C1)O,4-(4-hydroxyphenyl)but-3-en-2-one,-7.4,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 3,13,False
+13,CCCCCCCC(=O)O,octanoic acid,-7.3,"UNK0, F43602, TYR366, PHE440, PHE360",gemma - 5,12,False
+14,COC(=O)/C=C/C1=CC=C(C=C1)O,methyl (E)-3-(4-hydroxyphenyl)prop-2-enoate,-7.3,"UNK0, F43602, TYR366, PHE440, PHE360",gemma - 5,12,False
+15,COC(=O)/C=C/C1=CC(=C(C=C1)O)O,"methyl (E)-3-(3,4-dihydroxyphenyl)prop-2-enoate",-7.3,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 2,13,False
+16,CC(=O)/C=C/C1=CC=C(C=C1)O,(E)-4-(4-hydroxyphenyl)but-3-en-2-one,-7.3,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 3,13,False
+17,CC(C)=CCC(C)=CCO,"3,6-dimethylhepta-2,5-dien-1-ol",-7.3,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 4,13,False
+18,CCCC=CC(=O)O,hex-2-enoic acid,-7.2,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 4,13,False
+19,CCCCCCC(=O)O,heptanoic acid,-7.1,"UNK0, F43602, TYR366, PHE440, PHE360",gemma - 4,12,False
+20,C1=CC(=CC=C1C=CC)O,4-prop-1-enylphenol,-7.1,"UNK0, F43602, TYR366, PHE440, PHE360",gemma,13,False
+21,COC1=C(C=C(C=C1)/C=C/C(=O)O)O,(E)-3-(3-hydroxy-4-methoxyphenyl)prop-2-enoic acid,-7.0,"UNK0, F43602, TYR366, PHE440, PHE360",gemma 2,13,False
+22,C1=CC(=CC=C1/C=C/C(=O)O)O,(E)-3-(4-hydroxyphenyl)prop-2-enoic acid,-6.9,"PHE360, PHE440, UNK0, F43602, TYR366",qwen,11,False
+23,C1=CC(=C(C=C1/C=C/C(=O)O)O)O,"(E)-3-(3,4-dihydroxyphenyl)prop-2-enoic acid",-6.9,"PHE360, PHE440, UNK0, F43602, TYR366",qwen,11,False
+24,CCOC(=O)/C=C/C1=CC=C(C=C1)O,ethyl (E)-3-(4-hydroxyphenyl)prop-2-enoate,-6.5,"UNK0, F43602, TYR366, PHE440, PHE360",gemma - 5,12,False
+25,NC(C(=O)O)CCS,2-amino-4-sulfanylbutanoic acid,-4.6,"PHE360, PHE440, UNK0, F43602, TYR366",gemma,11,False
+26,NC(C(=O)O)CS,2-amino-3-sulfanylpropanoic acid,-4.3,"PHE360, PHE440, UNK0, F43602, TYR366",gemma,11,False
+27,Capric Acid,Octanoic Acid (CCCCCCCC(=O)O),-,-,gemma - 5,12,False
+28,CCCCC/C=C(\C)/C=O,2-Methyl-2-heptenal,-,-,gemma 4,13,False

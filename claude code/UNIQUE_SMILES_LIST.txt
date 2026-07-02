@@ -1,0 +1,471 @@
+====================================================================================================
+UNIQUE SMILES EXTRACTED FROM ALL FINAL SUMMARY TABLES (Prompts 1-13)
+====================================================================================================
+
+Total Unique SMILES: 82
+Total Occurrences: 127
+Average Occurrences per SMILES: 1.55
+
+SMILES APPEARING MOST FREQUENTLY (appear in multiple prompts):
+----------------------------------------------------------------------------------------------------
+
+1. C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O
+   Occurrences: 9
+   Found in prompts: [7, 8, 9]
+   Found in files: ['7 - gpt-oss120', '7 - gpt-oss20.md', '8 - gpt - 20.md', '9 - crashed - gemma', '9 - crashed 2 - gemma', '9-limited-gpt120']
+
+2. C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+   Occurrences: 4
+   Found in prompts: [7, 8, 9]
+   Found in files: ['7 - gpt-oss120', '8 - gpt - 20.md', '9 - crashed 2 - gemma']
+
+3. ...
+   Occurrences: 4
+   Found in prompts: [7, 8]
+   Found in files: ['7 - gpt-oss20.md', '8 - gpt - 20.md']
+
+4. C1=CC(=CC(=C1)O)/C=C/C(=O)O
+   Occurrences: 4
+   Found in prompts: [11, 12]
+   Found in files: ['11 - gpt120', '12 - gemma', '12 - gemma - 3']
+
+5. O=[N+]([O-])OCCCCc1ccc(C#N)cc1F
+   Occurrences: 2
+   Found in prompts: [1, 5]
+   Found in files: ['1.md', '5.md']
+
+6. O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1
+   Occurrences: 2
+   Found in prompts: [1, 5]
+   Found in files: ['1.md', '5.md']
+
+7. O=[N+]([O-])CCCCc1ccc(C(F)(F)F)cc1
+   Occurrences: 2
+   Found in prompts: [2, 4]
+   Found in files: ['2.md', '4.md']
+
+8. O=[N+]([O-])CCCCc1ccc(C#N)cc1
+   Occurrences: 2
+   Found in prompts: [2, 4]
+   Found in files: ['2.md', '4.md']
+
+9. O=[N+]([O-])CCCCc1ccc(C#N)cc1F
+   Occurrences: 2
+   Found in prompts: [2, 4]
+   Found in files: ['2.md', '4.md']
+
+10. O=[N+]([O-])c1ccc(C(F)(F)F)cc1
+   Occurrences: 2
+   Found in prompts: [2, 4]
+   Found in files: ['2.md', '4.md']
+
+11. C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+   Occurrences: 2
+   Found in prompts: [7, 9]
+   Found in files: ['7 - gpt-oss120', '9 - crashed 2 - gemma']
+
+12. COC1=C(C=CC(=C1)/C=C/C(=O)O[C@@H]2C[C@@](C[C@H]([C@H]2O)O)(C(=O)O)O)O
+   Occurrences: 2
+   Found in prompts: [7, 9]
+   Found in files: ['7 - gpt-oss120', '9 - crashed 2 - gemma']
+
+13. **C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O**
+   Occurrences: 2
+   Found in prompts: [7, 9]
+   Found in files: ['7 - gpt-oss20.md', '9-limited-gpt120']
+
+14. CCCCC/C=C(\C)/C=O
+   Occurrences: 2
+   Found in prompts: [12, 13]
+   Found in files: ['12 - gemma', '13 - gemma 4']
+
+
+====================================================================================================
+ALL UNIQUE SMILES (complete list):
+----------------------------------------------------------------------------------------------------
+
+1. C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O
+   Occurrences: 9
+   Prompts: [7, 8, 9]
+
+2. C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+   Occurrences: 4
+   Prompts: [7, 8, 9]
+
+3. ...
+   Occurrences: 4
+   Prompts: [7, 8]
+
+4. C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O
+   Occurrences: 4
+   Prompts: [9]
+
+5. C1=CC(=CC=C1/C=C/C(=O)O)O
+   Occurrences: 4
+   Prompts: [11]
+
+6. C1=CC(=CC(=C1)O)/C=C/C(=O)O
+   Occurrences: 4
+   Prompts: [11, 12]
+
+7. **C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O**
+   Occurrences: 3
+   Prompts: [9]
+
+8. C1=CC(=C(C=C1/C=C/C(=O)O)O)O
+   Occurrences: 3
+   Prompts: [11]
+
+9. C=CC[S@](=O)C[C@@H](C(=O)O)N
+   Occurrences: 3
+   Prompts: [11]
+
+10. O=[N+]([O-])OCCCCc1ccc(C#N)cc1F
+   Occurrences: 2
+   Prompts: [1, 5]
+
+11. O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1
+   Occurrences: 2
+   Prompts: [1, 5]
+
+12. O=[N+]([O-])CCCCc1ccc(C(F)(F)F)cc1
+   Occurrences: 2
+   Prompts: [2, 4]
+
+13. O=[N+]([O-])CCCCc1ccc(C#N)cc1
+   Occurrences: 2
+   Prompts: [2, 4]
+
+14. O=[N+]([O-])CCCCc1ccc(C#N)cc1F
+   Occurrences: 2
+   Prompts: [2, 4]
+
+15. O=[N+]([O-])c1ccc(C(F)(F)F)cc1
+   Occurrences: 2
+   Prompts: [2, 4]
+
+16. C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+   Occurrences: 2
+   Prompts: [7, 9]
+
+17. COC1=C(C=CC(=C1)/C=C/C(=O)O[C@@H]2C[C@@](C[C@H]([C@H]2O)O)(C(=O)O)O)O
+   Occurrences: 2
+   Prompts: [7, 9]
+
+18. C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O)O
+   Occurrences: 2
+   Prompts: [7]
+
+19. **C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O**
+   Occurrences: 2
+   Prompts: [7, 9]
+
+20. C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O
+   Occurrences: 2
+   Prompts: [9]
+
+21. C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O
+   Occurrences: 2
+   Prompts: [9]
+
+22. C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+   Occurrences: 2
+   Prompts: [9]
+
+23. C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O
+   Occurrences: 2
+   Prompts: [9]
+
+24. CC(=CCC/C(=C/C=O)/C)C
+   Occurrences: 2
+   Prompts: [12]
+
+25. CCCCC/C=C(\C)/C=O
+   Occurrences: 2
+   Prompts: [12, 13]
+
+26. O=[N+]([O-])c1ccc(C#N)cc1F
+   Occurrences: 1
+   Prompts: [4]
+   File: 4.md
+
+27. O=[N+]([O-])c1ccc(C#N)cc1
+   Occurrences: 1
+   Prompts: [4]
+   File: 4.md
+
+28. *C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O*
+   Occurrences: 1
+   Prompts: [7]
+   File: 7 - gpt-oss20.md
+
+29. *C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O*
+   Occurrences: 1
+   Prompts: [7]
+   File: 7 - gpt-oss20.md
+
+30. *C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O*
+   Occurrences: 1
+   Prompts: [7]
+   File: 7 - gpt-oss20.md
+
+31. same as 1A–1C (mirror stereochemistry) → identical numbers and scores
+   Occurrences: 1
+   Prompts: [7]
+   File: 7 - gpt-oss20.md
+
+32. C1[C@H]([C@@H]([C@@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O
+   Occurrences: 1
+   Prompts: [8]
+   File: 8 - gpt - 20.md
+
+33. C1C(C(C(CC1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O
+   Occurrences: 1
+   Prompts: [9]
+   File: 9 - crashed 2 - gemma
+
+34. **C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O**
+   Occurrences: 1
+   Prompts: [9]
+   File: 9-limited-gpt120
+
+35. **C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O**
+   Occurrences: 1
+   Prompts: [9]
+   File: 9-limited-gpt120
+
+36. **C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O**
+   Occurrences: 1
+   Prompts: [9]
+   File: 9-limited-gpt120
+
+37. C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O)O
+   Occurrences: 1
+   Prompts: [9]
+   File: 9-limited-gpt120
+
+38. C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O)O
+   Occurrences: 1
+   Prompts: [9]
+   File: 9-limited-gpt120
+
+39. NC(C(=O)O)CCS
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gemma
+
+40. NC(C(=O)O)CS
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gemma
+
+41. C1=CC(=CC(=C1)O)/[13CH]=[13CH]/[13C](=O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt120
+
+42. C1=CC=C(C(=C1)/C=C/C(=O)O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt120
+
+43. C=CCS(=O)C[C@@H](C(=O)N)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt120
+
+44. **Ferulic‑acid analogue** COc1c(cc(cc1)C=CC(=O)O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt120
+
+45. COc1c(cc(cc1)C=CC(=O)O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt120
+
+46. Cc1ccc(cc1O)C(=O)C=C(O)[C@H]1O[C@H](O)CO1
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+47. c1ccc(cc1O)C(CO)C(O)C(=O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+48. c1ccc(cc1O)C(=O)C[C@H]1OCOO1
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+49. c1ccc(cc1O)C(=O)OC[C@@H](C)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+50. c1ccc(cc1O)CC(=O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+51. CC(C)S(=O)(=O)CO[C@@H](C)C(=O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+52. CC(C)S(=O)(=O)[C@H](C)C(=O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+53. C[C@@H]1CS(=O)(=O)C[C@H]1C(=O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+54. CCS(=O)(=O)C[C@H](C)C(=O)O
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+55. C=C[S@](=O)C[C@@H](C(=O)O)N
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - gpt20
+
+56. **C1=CC(=CC(=C1)O)/C=C/C(=O)O**
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - nemotron
+
+57. C1=CC(=CC=C1/C=C/C(=O)O)[O-]
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - nemotron
+
+58. C=CCSC[C@@H](C(=O)O)N
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - nemotron
+
+59. C=CCS(=O)CC(C(=O)O)N
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - nemotron
+
+60. C/C=C/S(=O)C[C@@H](C(=O)[O-])[NH3+]
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - nemotron
+
+61. CS(=O)CC[C@@H](C(=O)O)N
+   Occurrences: 1
+   Prompts: [11]
+   File: 11 - nemotron
+
+62. C/C=C/C1=CC(=C(C=C1)O)OC
+   Occurrences: 1
+   Prompts: [12]
+   File: 12 - gemma
+
+63. CCCCCCCCCC(=O)O
+   Occurrences: 1
+   Prompts: [12]
+   File: 12 - gemma - 3
+
+64. CCOC(=O)/C=C/C1=CC=C(C=C1)O
+   Occurrences: 1
+   Prompts: [12]
+   File: 12 - gemma - 4
+
+65. CCCCCCCCC(=O)O
+   Occurrences: 1
+   Prompts: [12]
+   File: 12 - gemma - 4
+
+66. CCCCCCCC(=O)O
+   Occurrences: 1
+   Prompts: [12]
+   File: 12 - gemma - 4
+
+67. COC(=O)/C=C/C1=CC=C(C=C1)O
+   Occurrences: 1
+   Prompts: [12]
+   File: 12 - gemma - 4
+
+68. CCCCCCC(=O)O
+   Occurrences: 1
+   Prompts: [12]
+   File: 12 - gemma - 4
+
+69. C1=CC(=CC=C1C=CC)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma
+
+70. CC(C)=CCC(C)=CCC(C)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma
+
+71. CCOC(=O)/C=C/C1=CC(=C(C=C1)O)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 2
+
+72. COC(=O)/C=C/C1=CC(=C(C=C1)O)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 2
+
+73. COC1=C(C=C(C=C1)/C=C/C(=O)O)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 2
+
+74. C1=CC(=CC=C1/C=C/C(=O)/C=C/C2=CC=C(C=C2)O)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 3
+
+75. CC1=CC[C@H](CC1)C(=C)CCC=C(C)C
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 3
+
+76. CC(=CCCC(=CCCC(=CC=O)C)C)C
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 3
+
+77. CC(=O)C=CC1=CC=C(C=C1)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 3
+
+78. CC(=O)/C=C/C1=CC=C(C=C1)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 3
+
+79. CCCCCCC=CC(=O)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 4
+
+80. CCCCC=CC(=O)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 4
+
+81. CC(C)=CCC(C)=CCO
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 4
+
+82. CCCC=CC(=O)O
+   Occurrences: 1
+   Prompts: [13]
+   File: 13 - gemma 4
+

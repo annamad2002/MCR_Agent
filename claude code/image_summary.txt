@@ -1,0 +1,37 @@
+# Image Coverage Summary for MCR Inhibitor Compounds
+
+## Total Compounds: 199
+
+### Compounds WITH Images: 17
+These compounds have 2D structure images from PubChem:
+
+1. Lovastatin (CID: 53232)
+2. Capric Acid (CID: 2969)
+3. (E)-3-(3-hydroxyphenyl)prop-2-enoic acid (CID: 637541)
+4. (E)-3-(4-hydroxyphenyl)prop-2-enoic acid (CID: 637542)
+5. (E)-3-(3,4-dihydroxyphenyl)prop-2-enoic acid (CID: 689043)
+6. (E)-3-(4-hydroxyphenyl)prop-2-enal (CID: 641301)
+7. 3-(3,4-dihydroxyphenyl)prop-2-enoic acid (CID: 2518)
+8. 3-(3,4-dihydroxyphenyl)-2-[3-(3,4-dihydroxyphenyl)prop-2-enoyloxy]propanoic acid (CID: 5099)
+9. (1R,3R,4S,5R)-1,3-bis[[(E)-3-(3,4-dihydroxyphenyl)prop-2-enoyl]oxy]-4,5-dihydroxycyclohexane-1-carboxylic acid (CID: 5281769)
+10. (1S,3R,4R,5R)-3,4-bis[[(E)-3-(3,4-dihydroxyphenyl)prop-2-enoyl]oxy]-1,5-dihydroxycyclohexane-1-carboxylic acid (CID: 5281780)
+11. (2R)-3-(3,4-dihydroxyphenyl)-2-[(E)-3-(3,4-dihydroxyphenyl)prop-2-enoyl]oxypropanoic acid (CID: 5281792)
+12. (1S,3R,4R,5R)-1,3,4-trihydroxy-5-[(E)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoyl]oxycyclohexane-1-carboxylic acid (CID: 54454)
+13. Citral (CID: 638011)
+14. 3,7-dimethylocta-2,6-dienal (CID: 8843)
+15. p-cymene (CID: 7463)
+16. Limonene (CID: 22311)
+17. Eugenol (CID: 3314)
+
+### Compounds WITHOUT Images: 182
+These are marked as "Image not found" in the markdown table. They could not be found in PubChem or had SMILES strings that couldn't be parsed.
+
+## Image Sources
+- **PubChem**: 17 images (2D structures automatically generated)
+- **Directory**: pubchem_images/
+
+## Notes
+- All images obtained from PubChem (https://pubchem.ncbi.nlm.nih.gov/)
+- Images are 2D structure diagrams
+- Compounds with proper IUPAC names had better success rates in finding images
+- Compounds with generic/undefined names (PubChem CID: None) could not be located

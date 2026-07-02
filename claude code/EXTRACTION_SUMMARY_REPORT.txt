@@ -1,0 +1,203 @@
+================================================================================
+FINAL EXTRACTION SUMMARY REPORT
+Extracted from: All prompt chat logs (1-13)
+Task: Extract complete final evaluation/summary tables
+================================================================================
+
+OVERVIEW
+--------
+Total Prompts Analyzed: 13
+Prompts WITH Final Summary Tables: 11 (Prompts 1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+Prompts WITHOUT Final Summary Tables: 2 (Prompts 3, 6)
+
+DETAILED BREAKDOWN BY PROMPT
+=============================
+
+Prompt 1 (1.md)
+  - Status: HAS final summary table
+  - Model(s): Unknown (appears to be default)
+  - Compounds in final table: 2
+  - Files with summary: 1
+  - Table format: Aromatic analogues with docking scores and properties
+  - Key columns: SMILES, Docking score, QED, MW, LogP, H-bond donors/acceptors, PSA, Rotatable bonds
+
+Prompt 2 (2.md)
+  - Status: HAS final summary table
+  - Model(s): Unknown
+  - Compounds in final table: 4
+  - Files with summary: 1
+  - Table format: Lipinski properties and drug-likeness assessment
+  - Key columns: SMILES, MW, LogP, HBD, HBA, PSA, Rotatable bonds, QED, Undesirable moieties
+
+Prompt 3
+  - Status: NO final summary table
+  - Reason: Directory is empty - no chat logs found
+
+Prompt 4 (4.md)
+  - Status: HAS final summary table
+  - Model(s): Unknown
+  - Compounds in final table: 6
+  - Files with summary: 1
+  - Table format: Designed analogues with design rationale
+  - Key columns: SMILES (canonical), Design rationale, Docking score
+
+Prompt 5 (5.md)
+  - Status: HAS final summary table
+  - Model(s): Unknown
+  - Compounds in final table: 2
+  - Files with summary: 1
+  - Table format: Similar to Prompt 1 (aromatic analogues)
+  - Key columns: SMILES, Docking score, QED, MW, LogP, etc.
+
+Prompt 6
+  - Status: NO final summary table
+  - Reason: Chat log exists but contains only tool calls and docking runs, no final summary section
+
+Prompt 7 (Multiple files)
+  - Status: HAS final summary tables
+  - Model(s): GPT (two variants), Qwen
+  - Files with summaries: 2 (7 - gpt-oss20.md, 7 - gpt-oss120)
+  - Total compounds in final tables: 16
+  - File details:
+    * 7 - gpt-oss20.md: 12 compounds
+    * 7 - gpt-oss120: 4 compounds
+  - Key columns: SMILES, Docking, MW, LogP, analog info
+
+Prompt 8 (Multiple files)
+  - Status: HAS final summary tables
+  - Model(s): GPT, Qwen
+  - Files with summaries: 1 (8 - gpt - 20.md)
+  - Total compounds in final tables: 6
+  - Key columns: Scaffold, Rank, SMILES, Docking Score, QED
+
+Prompt 9 (Multiple files)
+  - Status: HAS final summary tables
+  - Model(s): Gemma (crashed variants), GPT
+  - Files with summaries: 3
+  - Total compounds in final tables: 29
+  - File details:
+    * 9 - crashed - gemma: 4 compounds
+    * 9 - crashed 2 - gemma: 10 compounds
+    * 9-limited-gpt120: 15 compounds
+  - Key columns: SMILES, Docking Score, Interacting Residues, Lipinski properties, NP/SAS scores
+
+Prompt 10 (10 - gemma)
+  - Status: HAS final summary table
+  - Model(s): Gemma
+  - Compounds in final table: 2 (p-Coumaric acid, Caffeic acid)
+  - Key columns: SMILES, Docking Score, Target Residues, QED, NP Score, Rumen Suitability
+  - Note: Final summary appears at end of file with recommendation table
+
+Prompt 11 (Multiple files)
+  - Status: HAS final summary tables
+  - Model(s): Gemma, GPT (120 and 20 variants), Nemotron, Devstral
+  - Files with summaries: 4
+  - Total compounds in final tables: 35
+  - File details:
+    * 11 - gemma: 4 compounds
+    * 11 - gpt120: 12 compounds
+    * 11 - gpt20: 10 compounds
+    * 11 - nemotron: 9 compounds
+  - Key columns: Rank, SMILES, Common name, Docking score, Target Residues, Lipinski properties
+
+Prompt 12 (Multiple files)
+  - Status: HAS final summary tables
+  - Model(s): Gemma (multiple runs)
+  - Files with summaries: 3
+  - Total compounds in final tables: 12
+  - File details:
+    * 12 - gemma: 4 compounds
+    * 12 - gemma - 3: 3 compounds
+    * 12 - gemma - 4: 5 compounds
+  - Key columns: Compound, SMILES, Docking Score, Interacting Residues, QED
+
+Prompt 13 (Multiple files)
+  - Status: HAS final summary tables
+  - Model(s): Gemma (multiple runs)
+  - Files with summaries: 4
+  - Total compounds in final tables: 15
+  - File details:
+    * 13 - gemma: 2 compounds
+    * 13 - gemma 2: 3 compounds
+    * 13 - gemma 3: 5 compounds
+    * 13 - gemma 4: 5 compounds
+  - Key columns: Compound, SMILES, Docking Score, Interacting Residues, NP Score
+
+COMPOUND STATISTICS
+====================
+Total Compound Entries Found: 127
+Total Unique SMILES Extracted: 82
+
+Distribution by Prompt:
+  Prompt 1: 2 compounds
+  Prompt 2: 4 compounds
+  Prompt 4: 6 compounds
+  Prompt 5: 2 compounds
+  Prompt 7: 16 compounds
+  Prompt 8: 6 compounds
+  Prompt 9: 29 compounds
+  Prompt 10: 2 compounds (note: these may not have been in original extraction tables)
+  Prompt 11: 35 compounds
+  Prompt 12: 12 compounds
+  Prompt 13: 15 compounds
+
+TOP 5 MOST COMMON COLUMNS IN FINAL TABLES
+===========================================
+1. SMILES (appears in all final summary tables)
+2. Docking Score / Binding Affinity (appears in ~95% of tables)
+3. Interacting Residues / Target Residues (appears in ~70% of tables)
+4. QED Score (appears in ~50% of tables)
+5. Molecular Weight (MW) (appears in ~45% of tables)
+
+OTHER COLUMNS FOUND
+====================
+- LogP (lipophilicity)
+- H-bond donors/acceptors
+- Polar Surface Area (PSA)
+- Rotatable bonds
+- NP Score (Natural Product likeness)
+- SAS Score (Synthetic Accessibility)
+- Commercial Availability
+- Compound Name/ID
+- Design Rationale
+- Lipinski Compliance flags
+
+KEY FINDINGS
+============
+
+1. SMILES Coverage:
+   - All 127 compound entries have SMILES data
+   - 82 unique SMILES total
+   - 45 SMILES appear in multiple prompts (indicating consistency/reuse)
+
+2. Most Frequently Appearing Compounds:
+   - Several polyphenolic/tannin derivatives appear across prompts 7, 8, 9
+   - Nitro-oxy aromatic compounds appear in early prompts (1, 2, 4, 5)
+
+3. Data Quality:
+   - Most tables include binding affinity/docking scores
+   - About 70% include target residue information
+   - About 50% include drug-like property scores (QED)
+
+4. Missing Prompts:
+   - Prompt 3: No data (empty directory)
+   - Prompt 6: No final summary table in chat log
+
+COLUMN VARIATIONS BY PROMPT
+============================
+Early Prompts (1-5): Focus on aromatic analogue design and Lipinski properties
+Middle Prompts (7-9): Transition to plant-derived polyphenols, added docking residues
+Late Prompts (10-13): Most comprehensive - include docking residues, NP/SAS scores, commercial availability
+
+NOTES AND OBSERVATIONS
+======================
+
+1. The extraction captured 127 compound entries across 21 files
+2. Prompts with multiple model runs (11, 12, 13) show different compounds recommended by different LLM models
+3. Early prompts focused on synthetic nitro-aromatic compounds
+4. Later prompts shifted toward natural compounds (higher NP scores)
+5. Several compounds are recommended across multiple prompts, suggesting strong candidate status
+6. Prompt 10 has a particularly concise final summary with only 2 compounds
+7. Prompt 11 has the most comprehensive results with 35 compounds across 4 model variants
+
+================================================================================

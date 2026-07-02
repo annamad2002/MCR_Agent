@@ -1,0 +1,1229 @@
+{
+  "metadata": {
+    "task": "Extract complete final evaluation/summary tables from all prompt chat logs (1-13)",
+    "total_prompts_analyzed": 13,
+    "prompts_with_final_summaries": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "prompts_without_final_summaries": [
+      3,
+      6
+    ],
+    "notes": {
+      "prompt_3": "Directory is empty, no chat logs found",
+      "prompt_6": "Has chat log but no final summary table found in content",
+      "prompt_10": "Has chat log with final summary table at end of file"
+    }
+  },
+  "summary_by_prompt": {
+    "Prompt_1": {
+      "prompt_number": 1,
+      "num_files_with_summaries": 1,
+      "total_compounds": 2,
+      "unique_smiles": 2,
+      "files": [
+        "1.md"
+      ],
+      "columns_found": [
+        "#",
+        "Docking score* (MCR)",
+        "H\u2011bond acceptors",
+        "H\u2011bond donors",
+        "LogP",
+        "MW\u202f(g\u00b7mol\u207b\u00b9)",
+        "Polar Surface\u202fArea\u202f(\u00c5\u00b2)",
+        "QED",
+        "Rotatable bonds",
+        "SMILES (aromatic analogue)"
+      ],
+      "sample_compounds": [
+        {
+          "#": "**A1**",
+          "SMILES (aromatic analogue)": "`O=[N+]([O-])OCCCCc1ccc(C#N)cc1F`",
+          "Docking score* (MCR)": "**\u20118.6**",
+          "QED": "0.432",
+          "MW\u202f(g\u00b7mol\u207b\u00b9)": "238.22",
+          "LogP": "2.23",
+          "H\u2011bond acceptors": "4",
+          "H\u2011bond donors": "0",
+          "Polar Surface\u202fArea\u202f(\u00c5\u00b2)": "76.2",
+          "Rotatable bonds": "6",
+          "SMILES_clean": "O=[N+]([O-])OCCCCc1ccc(C#N)cc1F",
+          "source_prompt": 1,
+          "source_file": "1.md",
+          "table_num": 0
+        },
+        {
+          "#": "**A2**",
+          "SMILES (aromatic analogue)": "`O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1`",
+          "Docking score* (MCR)": "**\u20118.6**",
+          "QED": "0.449",
+          "MW\u202f(g\u00b7mol\u207b\u00b9)": "263.22",
+          "LogP": "3.24",
+          "H\u2011bond acceptors": "3",
+          "H\u2011bond donors": "0",
+          "Polar Surface\u202fArea\u202f(\u00c5\u00b2)": "52.4",
+          "Rotatable bonds": "6",
+          "SMILES_clean": "O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1",
+          "source_prompt": 1,
+          "source_file": "1.md",
+          "table_num": 0
+        }
+      ]
+    },
+    "Prompt_2": {
+      "prompt_number": 2,
+      "num_files_with_summaries": 1,
+      "total_compounds": 4,
+      "unique_smiles": 4,
+      "files": [
+        "2.md"
+      ],
+      "columns_found": [
+        "#",
+        "H\u2011bond acceptors (HBA)",
+        "H\u2011bond donors (HBD)",
+        "LogP",
+        "MW (g\u202fmol\u207b\u00b9)",
+        "PSA (\u00c5\u00b2)",
+        "QED (0\u20111)",
+        "Rotatable bonds",
+        "SMILES",
+        "Undesirable moieties*"
+      ],
+      "sample_compounds": [
+        {
+          "#": "1",
+          "SMILES": "O=[N+]([O-])CCCCc1ccc(C(F)(F)F)cc1",
+          "MW (g\u202fmol\u207b\u00b9)": "247.2",
+          "LogP": "3.30",
+          "H\u2011bond donors (HBD)": "0",
+          "H\u2011bond acceptors (HBA)": "2",
+          "PSA (\u00c5\u00b2)": "43.1",
+          "Rotatable bonds": "5",
+          "QED (0\u20111)": "**0.455**",
+          "Undesirable moieties*": "3",
+          "SMILES_clean": "O=[N+]([O-])CCCCc1ccc(C(F)(F)F)cc1",
+          "source_prompt": 2,
+          "source_file": "2.md",
+          "table_num": 0
+        },
+        {
+          "#": "2",
+          "SMILES": "O=[N+]([O-])CCCCc1ccc(C#N)cc1",
+          "MW (g\u202fmol\u207b\u00b9)": "204.2",
+          "LogP": "2.16",
+          "H\u2011bond donors (HBD)": "0",
+          "H\u2011bond acceptors (HBA)": "3",
+          "PSA (\u00c5\u00b2)": "66.9",
+          "Rotatable bonds": "5",
+          "QED (0\u20111)": "**0.419**",
+          "Undesirable moieties*": "3",
+          "SMILES_clean": "O=[N+]([O-])CCCCc1ccc(C#N)cc1",
+          "source_prompt": 2,
+          "source_file": "2.md",
+          "table_num": 0
+        }
+      ]
+    },
+    "Prompt_4": {
+      "prompt_number": 4,
+      "num_files_with_summaries": 1,
+      "total_compounds": 6,
+      "unique_smiles": 6,
+      "files": [
+        "4.md"
+      ],
+      "columns_found": [
+        "#",
+        "Design rationale",
+        "Docking score*",
+        "SMILES (canonical)"
+      ],
+      "sample_compounds": [
+        {
+          "#": "1",
+          "SMILES (canonical)": "`O=[N+]([O-])c1ccc(C(F)(F)F)cc1`",
+          "Design rationale": "Nitro\u202fdirectly attached to a phenyl ring that bears a **trifluoromethyl** group (electron\u2011withdrawing, aromatic\u2011compatible).",
+          "Docking score*": "**\u20117.1**",
+          "SMILES_clean": "O=[N+]([O-])c1ccc(C(F)(F)F)cc1",
+          "source_prompt": 4,
+          "source_file": "4.md",
+          "table_num": 0
+        },
+        {
+          "#": "2",
+          "SMILES (canonical)": "`O=[N+]([O-])c1ccc(C#N)cc1F`",
+          "Design rationale": "Nitro\u202fdirectly attached to a phenyl ring bearing a **nitrile** and a **fluoro** substituent (maintains the key H\u2011bond\u2011acceptor/cyanide and halogen\u2011\u03c0 interactions).",
+          "Docking score*": "**\u20116.3**",
+          "SMILES_clean": "O=[N+]([O-])c1ccc(C#N)cc1F",
+          "source_prompt": 4,
+          "source_file": "4.md",
+          "table_num": 0
+        }
+      ]
+    },
+    "Prompt_5": {
+      "prompt_number": 5,
+      "num_files_with_summaries": 1,
+      "total_compounds": 2,
+      "unique_smiles": 2,
+      "files": [
+        "5.md"
+      ],
+      "columns_found": [
+        "#",
+        "Docking score* (MCR)",
+        "H\u2011bond acceptors",
+        "H\u2011bond donors",
+        "LogP",
+        "MW\u202f(g\u00b7mol\u207b\u00b9)",
+        "Polar Surface\u202fArea\u202f(\u00c5\u00b2)",
+        "QED",
+        "Rotatable bonds",
+        "SMILES (aromatic analogue)"
+      ],
+      "sample_compounds": [
+        {
+          "#": "**A1**",
+          "SMILES (aromatic analogue)": "`O=[N+]([O-])OCCCCc1ccc(C#N)cc1F`",
+          "Docking score* (MCR)": "**\u20118.6**",
+          "QED": "0.432",
+          "MW\u202f(g\u00b7mol\u207b\u00b9)": "238.22",
+          "LogP": "2.23",
+          "H\u2011bond acceptors": "4",
+          "H\u2011bond donors": "0",
+          "Polar Surface\u202fArea\u202f(\u00c5\u00b2)": "76.2",
+          "Rotatable bonds": "6",
+          "SMILES_clean": "O=[N+]([O-])OCCCCc1ccc(C#N)cc1F",
+          "source_prompt": 5,
+          "source_file": "5.md",
+          "table_num": 0
+        },
+        {
+          "#": "**A2**",
+          "SMILES (aromatic analogue)": "`O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1`",
+          "Docking score* (MCR)": "**\u20118.6**",
+          "QED": "0.449",
+          "MW\u202f(g\u00b7mol\u207b\u00b9)": "263.22",
+          "LogP": "3.24",
+          "H\u2011bond acceptors": "3",
+          "H\u2011bond donors": "0",
+          "Polar Surface\u202fArea\u202f(\u00c5\u00b2)": "52.4",
+          "Rotatable bonds": "6",
+          "SMILES_clean": "O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1",
+          "source_prompt": 5,
+          "source_file": "5.md",
+          "table_num": 0
+        }
+      ]
+    },
+    "Prompt_7": {
+      "prompt_number": 7,
+      "num_files_with_summaries": 2,
+      "total_compounds": 16,
+      "unique_smiles": 11,
+      "files": [
+        "7 - gpt-oss120",
+        "7 - gpt-oss20.md"
+      ],
+      "columns_found": [
+        "#",
+        "Analog SMILES",
+        "Aromatic Rings",
+        "Best\u2011scoring analogue (SMILES)",
+        "Compound SMILES",
+        "Docking",
+        "Docking Score (MCR)",
+        "Docking score (MCR)",
+        "HBA",
+        "HBD",
+        "Likely Identity",
+        "LogP",
+        "MW",
+        "MW (Da)",
+        "OM (\u22654 aromatic)",
+        "PSA ($\\text{\\AA}^2$)",
+        "QED",
+        "Rumen Basis",
+        "Rumen\u2011suitability",
+        "Set",
+        "TPSA",
+        "logP"
+      ],
+      "sample_compounds": [
+        {
+          "Compound SMILES": "`C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O`",
+          "Likely Identity": "**Dicaffeoylquinic acid**",
+          "Docking Score (MCR)": "**-9.9**",
+          "MW (Da)": "516.4",
+          "LogP": "1.03",
+          "PSA ($\\text{\\AA}^2$)": "211.3",
+          "QED": "0.156",
+          "SMILES_clean": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O",
+          "source_prompt": 7,
+          "source_file": "7 - gpt-oss120",
+          "table_num": 0
+        },
+        {
+          "Compound SMILES": "`C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O`",
+          "Likely Identity": "**Monocaffeoylquinic acid**",
+          "Docking Score (MCR)": "**-8.2**",
+          "MW (Da)": "354.3",
+          "LogP": "-0.65",
+          "PSA ($\\text{\\AA}^2$)": "164.8",
+          "QED": "0.234",
+          "SMILES_clean": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O",
+          "source_prompt": 7,
+          "source_file": "7 - gpt-oss120",
+          "table_num": 0
+        }
+      ]
+    },
+    "Prompt_8": {
+      "prompt_number": 8,
+      "num_files_with_summaries": 1,
+      "total_compounds": 6,
+      "unique_smiles": 4,
+      "files": [
+        "8 - gpt - 20.md"
+      ],
+      "columns_found": [
+        "Aromatic",
+        "Aromatic rings",
+        "Docking Score",
+        "Docking Score (MCR)",
+        "H\u2011acceptors",
+        "H\u2011donors",
+        "Key residues",
+        "Key residues (example)",
+        "LogP",
+        "MW",
+        "MW (Da)",
+        "NP",
+        "PSA",
+        "PSA (\u00c5\u00b2)",
+        "QED",
+        "Rank",
+        "Rot",
+        "Rot\u2011Bonds",
+        "SAS",
+        "Scaffold",
+        "Smiles",
+        "Smiles (by PubChem)"
+      ],
+      "sample_compounds": [
+        {
+          "Rank": "1",
+          "Smiles (by PubChem)": "`C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O`",
+          "Docking Score (MCR)": "**\u20119.9**",
+          "QED": "0.298",
+          "MW (Da)": "360.3",
+          "LogP": "1.76",
+          "H\u2011acceptors": "8",
+          "H\u2011donors": "5",
+          "PSA (\u00c5\u00b2)": "144.5",
+          "Rot\u2011Bonds": "6",
+          "Aromatic rings": "2",
+          "SAS": "2.90",
+          "NP": "1.13",
+          "Key residues (example)": "Arg68, Gln330, Glu66 \u2026 (see contacts)",
+          "SMILES_clean": "C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O",
+          "source_prompt": 8,
+          "source_file": "8 - gpt - 20.md",
+          "table_num": 0
+        },
+        {
+          "Rank": "2",
+          "Smiles (by PubChem)": "`C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O`",
+          "Docking Score (MCR)": "\u20119.9",
+          "QED": "0.156",
+          "MW (Da)": "516.5",
+          "LogP": "1.03",
+          "H\u2011acceptors": "12",
+          "H\u2011donors": "7",
+          "PSA (\u00c5\u00b2)": "211.3",
+          "Rot\u2011Bonds": "7",
+          "Aromatic rings": "2",
+          "SAS": "4.16",
+          "NP": "1.67",
+          "Key residues (example)": "Arg68, Gln330 \u2026",
+          "SMILES_clean": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O",
+          "source_prompt": 8,
+          "source_file": "8 - gpt - 20.md",
+          "table_num": 0
+        }
+      ]
+    },
+    "Prompt_9": {
+      "prompt_number": 9,
+      "num_files_with_summaries": 3,
+      "total_compounds": 29,
+      "unique_smiles": 17,
+      "files": [
+        "9 - crashed - gemma",
+        "9 - crashed 2 - gemma",
+        "9-limited-gpt120"
+      ],
+      "columns_found": [
+        "#",
+        "Available",
+        "Commercial Availability",
+        "Common name / description*",
+        "Docking Score",
+        "HBA",
+        "HBD",
+        "H\u2011bond acceptors",
+        "H\u2011bond donors",
+        "Interacting Residues",
+        "Key Residues",
+        "Lipinski Compliance",
+        "LogP",
+        "MW",
+        "MW (Da)",
+        "Mol",
+        "Molecule",
+        "NP",
+        "NP (\u20115\u202f\u2192\u202f5)",
+        "NP Score",
+        "PSA (\u00c5\u00b2)",
+        "QED",
+        "Rotatable bonds",
+        "SAS",
+        "SAS (1\u202f=\u202feasy,\u202f10\u202f=\u202fhard)",
+        "SAS Score",
+        "SMILES",
+        "SMILES (natural\u2011product analogue)"
+      ],
+      "sample_compounds": [
+        {
+          "Molecule": "**Mol 3**",
+          "SMILES": "`C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O`",
+          "Docking Score": "**-9.9**",
+          "Interacting Residues": "F43602",
+          "Lipinski Compliance": "No (MW, HBA, HBD)",
+          "NP Score": "1.67",
+          "SAS Score": "4.16",
+          "Commercial Availability": "Yes",
+          "SMILES_clean": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O",
+          "source_prompt": 9,
+          "source_file": "9 - crashed - gemma",
+          "table_num": 0
+        },
+        {
+          "Molecule": "**Mol 9**",
+          "SMILES": "`C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O`",
+          "Docking Score": "-9.5",
+          "Interacting Residues": "F43602",
+          "Lipinski Compliance": "No (MW, HBA, HBD)",
+          "NP Score": "1.35",
+          "SAS Score": "3.83",
+          "Commercial Availability": "Yes",
+          "SMILES_clean": "C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O",
+          "source_prompt": 9,
+          "source_file": "9 - crashed - gemma",
+          "table_num": 0
+        }
+      ]
+    },
+    "Prompt_11": {
+      "prompt_number": 11,
+      "num_files_with_summaries": 4,
+      "total_compounds": 35,
+      "unique_smiles": 27,
+      "files": [
+        "11 - gemma",
+        "11 - gpt120",
+        "11 - gpt20",
+        "11 - nemotron"
+      ],
+      "columns_found": [
+        "Candidate (SMILES)",
+        "Commercial",
+        "Commercial Availability",
+        "Commercially available",
+        "Common Name",
+        "Common name",
+        "Compound",
+        "Description",
+        "Docking Score",
+        "Docking Score (kcal/mol)",
+        "Docking Score*",
+        "Docking score",
+        "Interacting Residues",
+        "Key interacting residues",
+        "Lipinski & Rumen suitability",
+        "Lipinski (QED)",
+        "Lipinski Flags",
+        "LogP",
+        "MW",
+        "NP",
+        "NP Score",
+        "Original lead (SMILES)",
+        "Quick\u2011run docking score*",
+        "Rank",
+        "SAS",
+        "SAS / NP",
+        "SAS / NP Score",
+        "SAS Score",
+        "SMILES",
+        "Similar natural\u2011product analogues returned (\u2264\u202f5 hits)",
+        "Similar to",
+        "Status",
+        "Target Residues Bound",
+        "Target Residues Hit",
+        "Target Residues Hit (\u22652 required)"
+      ],
+      "sample_compounds": [
+        {
+          "Compound": "**Homocysteine**",
+          "SMILES": "`NC(C(=O)O)CCS`",
+          "Similar to": "Molecule 2",
+          "Docking Score": "-4.6",
+          "Target Residues Bound": "F43602, PHE360, PHE440, TYR366",
+          "NP Score": "1.32",
+          "SAS Score": "3.09",
+          "Status": "Available",
+          "SMILES_clean": "NC(C(=O)O)CCS",
+          "source_prompt": 11,
+          "source_file": "11 - gemma",
+          "table_num": 0
+        },
+        {
+          "Compound": "**p-Coumaric acid**",
+          "SMILES": "`C1=CC(=CC=C1/C=C/C(=O)O)O`",
+          "Similar to": "Molecule 1",
+          "Docking Score": "-6.9",
+          "Target Residues Bound": "PHE360, TYR366",
+          "NP Score": "0.84",
+          "SAS Score": "1.78",
+          "Status": "Available",
+          "SMILES_clean": "C1=CC(=CC=C1/C=C/C(=O)O)O",
+          "source_prompt": 11,
+          "source_file": "11 - gemma",
+          "table_num": 0
+        }
+      ]
+    },
+    "Prompt_12": {
+      "prompt_number": 12,
+      "num_files_with_summaries": 3,
+      "total_compounds": 12,
+      "unique_smiles": 10,
+      "files": [
+        "12 - gemma",
+        "12 - gemma - 3",
+        "12 - gemma - 4"
+      ],
+      "columns_found": [
+        "Availability",
+        "Commercial Availability",
+        "Compound",
+        "Docking Score",
+        "Interacting Residues",
+        "NP Score",
+        "QED",
+        "SAS Score",
+        "SMILES",
+        "Similarity Basis",
+        "Target Residues Bound"
+      ],
+      "sample_compounds": [
+        {
+          "Compound": "**p-Coumaric acid**",
+          "SMILES": "`C1=CC(=CC(=C1)O)/C=C/C(=O)O`",
+          "Docking Score": "-7.4",
+          "Interacting Residues": "F43602, PHE360, PHE440, TYR366",
+          "QED": "0.651",
+          "NP Score": "0.79",
+          "SAS Score": "1.89",
+          "Availability": "Yes",
+          "SMILES_clean": "C1=CC(=CC(=C1)O)/C=C/C(=O)O",
+          "source_prompt": 12,
+          "source_file": "12 - gemma",
+          "table_num": 0
+        },
+        {
+          "Compound": "**Citral**",
+          "SMILES": "`CC(=CCC/C(=C/C=O)/C)C`",
+          "Docking Score": "-7.5",
+          "Interacting Residues": "PHE360, PHE440, TYR366",
+          "QED": "0.344",
+          "NP Score": "2.64",
+          "SAS Score": "2.88",
+          "Availability": "Yes",
+          "SMILES_clean": "CC(=CCC/C(=C/C=O)/C)C",
+          "source_prompt": 12,
+          "source_file": "12 - gemma",
+          "table_num": 0
+        }
+      ]
+    },
+    "Prompt_13": {
+      "prompt_number": 13,
+      "num_files_with_summaries": 4,
+      "total_compounds": 15,
+      "unique_smiles": 15,
+      "files": [
+        "13 - gemma",
+        "13 - gemma 2",
+        "13 - gemma 3",
+        "13 - gemma 4"
+      ],
+      "columns_found": [
+        "Availability",
+        "Commercial Availability",
+        "Compound",
+        "Compound SMILES",
+        "Docking Score",
+        "Interacting Residues",
+        "Interacting Target Residues",
+        "Lipinski Properties",
+        "Lipinski/Availability",
+        "NP Score",
+        "Natural Product Likeness (NP)",
+        "SAS Score",
+        "SMILES",
+        "Similar To",
+        "Target Residues Engaged"
+      ],
+      "sample_compounds": [
+        {
+          "Compound": "**p-Coumaryl alcohol**",
+          "SMILES": "`C1=CC(=CC=C1C=CC)O`",
+          "Docking Score": "-7.1",
+          "Target Residues Engaged": "PHE360, PHE440, TYR366",
+          "NP Score": "1.05",
+          "SAS Score": "1.91",
+          "Commercial Availability": "Available",
+          "SMILES_clean": "C1=CC(=CC=C1C=CC)O",
+          "source_prompt": 13,
+          "source_file": "13 - gemma",
+          "table_num": 0
+        },
+        {
+          "Compound": "**Geraniol**",
+          "SMILES": "`CC(C)=CCC(C)=CCC(C)O`",
+          "Docking Score": "-7.8",
+          "Target Residues Engaged": "F43602, PHE360, PHE440, TYR366",
+          "NP Score": "2.47",
+          "SAS Score": "3.54",
+          "Commercial Availability": "Available",
+          "SMILES_clean": "CC(C)=CCC(C)=CCC(C)O",
+          "source_prompt": 13,
+          "source_file": "13 - gemma",
+          "table_num": 0
+        }
+      ]
+    }
+  },
+  "all_unique_compounds": [
+    {
+      "smiles": "O=[N+]([O-])OCCCCc1ccc(C#N)cc1F",
+      "found_in_prompts": [
+        1,
+        5
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1",
+      "found_in_prompts": [
+        1,
+        5
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "O=[N+]([O-])CCCCc1ccc(C(F)(F)F)cc1",
+      "found_in_prompts": [
+        2,
+        4
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "O=[N+]([O-])CCCCc1ccc(C#N)cc1",
+      "found_in_prompts": [
+        2,
+        4
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "O=[N+]([O-])CCCCc1ccc(C#N)cc1F",
+      "found_in_prompts": [
+        2,
+        4
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "O=[N+]([O-])c1ccc(C(F)(F)F)cc1",
+      "found_in_prompts": [
+        2,
+        4
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "O=[N+]([O-])c1ccc(C#N)cc1F",
+      "found_in_prompts": [
+        4
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "O=[N+]([O-])c1ccc(C#N)cc1",
+      "found_in_prompts": [
+        4
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O",
+      "found_in_prompts": [
+        7,
+        8,
+        9
+      ],
+      "num_occurrences": 9
+    },
+    {
+      "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O",
+      "found_in_prompts": [
+        7,
+        9
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O",
+      "found_in_prompts": [
+        7,
+        8,
+        9
+      ],
+      "num_occurrences": 4
+    },
+    {
+      "smiles": "COC1=C(C=CC(=C1)/C=C/C(=O)O[C@@H]2C[C@@](C[C@H]([C@H]2O)O)(C(=O)O)O)O",
+      "found_in_prompts": [
+        7,
+        9
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O)O",
+      "found_in_prompts": [
+        7
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "*C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O*",
+      "found_in_prompts": [
+        7
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "*C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O*",
+      "found_in_prompts": [
+        7
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "**C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O**",
+      "found_in_prompts": [
+        7,
+        9
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "...",
+      "found_in_prompts": [
+        7,
+        8
+      ],
+      "num_occurrences": 4
+    },
+    {
+      "smiles": "*C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O*",
+      "found_in_prompts": [
+        7
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "same as 1A\u20131C (mirror stereochemistry) \u2192 identical numbers and scores",
+      "found_in_prompts": [
+        7
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1[C@H]([C@@H]([C@@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O",
+      "found_in_prompts": [
+        8
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 4
+    },
+    {
+      "smiles": "C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "C1C(C(C(CC1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "**C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O**",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 3
+    },
+    {
+      "smiles": "**C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O**",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "**C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O**",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "**C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O**",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O)O",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O)O",
+      "found_in_prompts": [
+        9
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "NC(C(=O)O)CCS",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1=CC(=CC=C1/C=C/C(=O)O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 4
+    },
+    {
+      "smiles": "C1=CC(=C(C=C1/C=C/C(=O)O)O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 3
+    },
+    {
+      "smiles": "NC(C(=O)O)CS",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1=CC(=CC(=C1)O)/[13CH]=[13CH]/[13C](=O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C=CC[S@](=O)C[C@@H](C(=O)O)N",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 3
+    },
+    {
+      "smiles": "C1=CC(=CC(=C1)O)/C=C/C(=O)O",
+      "found_in_prompts": [
+        11,
+        12
+      ],
+      "num_occurrences": 4
+    },
+    {
+      "smiles": "C1=CC=C(C(=C1)/C=C/C(=O)O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C=CCS(=O)C[C@@H](C(=O)N)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "**Ferulic\u2011acid analogue** COc1c(cc(cc1)C=CC(=O)O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "COc1c(cc(cc1)C=CC(=O)O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "Cc1ccc(cc1O)C(=O)C=C(O)[C@H]1O[C@H](O)CO1",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "c1ccc(cc1O)C(CO)C(O)C(=O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "c1ccc(cc1O)C(=O)C[C@H]1OCOO1",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "c1ccc(cc1O)C(=O)OC[C@@H](C)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "c1ccc(cc1O)CC(=O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CC(C)S(=O)(=O)CO[C@@H](C)C(=O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CC(C)S(=O)(=O)[C@H](C)C(=O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C[C@@H]1CS(=O)(=O)C[C@H]1C(=O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCS(=O)(=O)C[C@H](C)C(=O)O",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C=C[S@](=O)C[C@@H](C(=O)O)N",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "**C1=CC(=CC(=C1)O)/C=C/C(=O)O**",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1=CC(=CC=C1/C=C/C(=O)O)[O-]",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C=CCSC[C@@H](C(=O)O)N",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C=CCS(=O)CC(C(=O)O)N",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C/C=C/S(=O)C[C@@H](C(=O)[O-])[NH3+]",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CS(=O)CC[C@@H](C(=O)O)N",
+      "found_in_prompts": [
+        11
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CC(=CCC/C(=C/C=O)/C)C",
+      "found_in_prompts": [
+        12
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "C/C=C/C1=CC(=C(C=C1)O)OC",
+      "found_in_prompts": [
+        12
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCCCC/C=C(\\C)/C=O",
+      "found_in_prompts": [
+        12,
+        13
+      ],
+      "num_occurrences": 2
+    },
+    {
+      "smiles": "CCCCCCCCCC(=O)O",
+      "found_in_prompts": [
+        12
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCOC(=O)/C=C/C1=CC=C(C=C1)O",
+      "found_in_prompts": [
+        12
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCCCCCCCC(=O)O",
+      "found_in_prompts": [
+        12
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCCCCCCC(=O)O",
+      "found_in_prompts": [
+        12
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "COC(=O)/C=C/C1=CC=C(C=C1)O",
+      "found_in_prompts": [
+        12
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCCCCCC(=O)O",
+      "found_in_prompts": [
+        12
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1=CC(=CC=C1C=CC)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CC(C)=CCC(C)=CCC(C)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCOC(=O)/C=C/C1=CC(=C(C=C1)O)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "COC(=O)/C=C/C1=CC(=C(C=C1)O)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "COC1=C(C=C(C=C1)/C=C/C(=O)O)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "C1=CC(=CC=C1/C=C/C(=O)/C=C/C2=CC=C(C=C2)O)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CC1=CC[C@H](CC1)C(=C)CCC=C(C)C",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CC(=CCCC(=CCCC(=CC=O)C)C)C",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CC(=O)C=CC1=CC=C(C=C1)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CC(=O)/C=C/C1=CC=C(C=C1)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCCCCCC=CC(=O)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCCCC=CC(=O)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CC(C)=CCC(C)=CCO",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    },
+    {
+      "smiles": "CCCC=CC(=O)O",
+      "found_in_prompts": [
+        13
+      ],
+      "num_occurrences": 1
+    }
+  ],
+  "column_types_found": "set()",
+  "total_statistics": {
+    "total_unique_smiles": 82,
+    "total_compound_entries": 127,
+    "files_with_summary_tables": 21,
+    "prompts_with_summaries": 11
+  }
+}

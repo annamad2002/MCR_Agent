@@ -1,0 +1,4 @@
+Rank,SMILES,Compound_Name,Docking_Score,Binding_Residues,Frequency,Commercial_Availability,QED,NP_Score,SAS_Score,MW,LogP,Prompt
+1,"CC(C)=CCC(C)=CCC(C)O","Geraniol",-7.8,"F43602, PHE360, PHE440, TYR366",1,"Available",,2.47,3.54,,,13
+2,"C1=CC(=CC=C1C=CC)O","p-Coumaryl alcohol",-7.1,"PHE360, PHE440, TYR366",1,"Available",,1.05,1.91,,,13
+3,"NC(C(=O)O)CCS","Homocysteine",-4.6,"F43602, PHE360, PHE440, TYR366",1,"",,1.32,3.09,,,11

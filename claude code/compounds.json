@@ -1,0 +1,26 @@
+{
+  "O=C(O)/C=C/c1ccccc1O": {
+    "canonical_smiles": "O=C(O)/C=C/c1ccccc1O",
+    "original_smiles": "C1=CC=C(C(=C1)/C=C/C(=O)O)O",
+    "name": "o-Coumaric acid",
+    "synonyms": []
+  },
+  "O=C(O)/C=C/c1cccc(O)c1": {
+    "canonical_smiles": "O=C(O)/C=C/c1cccc(O)c1",
+    "original_smiles": "C1=CC(=CC(=C1)O)/C=C/C(=O)O",
+    "name": "m-Coumaric acid",
+    "synonyms": []
+  },
+  "CCCCC/C=C(\\C)C=O": {
+    "canonical_smiles": "CCCCC/C=C(\\C)C=O",
+    "original_smiles": "CCCCC/C=C(\\C)/C=O",
+    "name": "2-Methyl-2-octenal",
+    "synonyms": []
+  },
+  "COC(=O)/C=C/c1ccc(O)cc1": {
+    "canonical_smiles": "COC(=O)/C=C/c1ccc(O)cc1",
+    "original_smiles": "COC(=O)/C=C/C1=CC=C(C=C1)O",
+    "name": "Methyl p-coumarate",
+    "synonyms": []
+  }
+}

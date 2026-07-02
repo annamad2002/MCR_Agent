@@ -1,0 +1,36 @@
+﻿SMILES,Affinity,Prompt,Model,IUPAC_Name,Common_Name
+C1=CC=C(C=C1)CC2=C(C=C(C=C2)O)O,-7.1,13,gemma 5,"4-benzylbenzene-1,3-diol",
+C1=CC(=CC=C1CC2=CC=C(C=C2)O)O,-7.4,13,gemma 5,4-[(4-hydroxyphenyl)methyl]phenol,
+CCCCCCC=CC(=O)O,-7.9,13,gemma 4,non-2-enoic acid,2-nonenoic acid
+CCCCC=CC(=O)O,-7.5,13,gemma 4,hept-2-enoic acid,heptenoic acid
+CC(C)=CCC(C)=CCO,-7.3,13,gemma 4,"3,6-dimethylhepta-2,5-dien-1-ol",
+CCCC=CC(=O)O,-7.2,13,gemma 4,hex-2-enoic acid,2-hexenoic acid
+CCCCC/C=C(\C)/C=O,-7,13,gemma 4,(E)-2-methyloct-2-enal,2-methyl-2-octenal
+C1=CC(=CC=C1/C=C/C(=O)/C=C/C2=CC=C(C=C2)O)O,-9.1,13,gemma 3,"(1E,4E)-1,5-bis(4-hydroxyphenyl)penta-1,4-dien-3-one",
+CC1=CC[C@H](CC1)C(=C)CCC=C(C)C,-9,13,gemma 3,"(4S)-1-methyl-4-(6-methylhepta-1,5-dien-2-yl)cyclohexene",beta-bisabolene
+CC(=CCCC(=CCCC(=CC=O)C)C)C,-7.7,13,gemma 3,"3,7,11-trimethyldodeca-2,6,10-trienal",
+CC(=O)C=CC1=CC=C(C=C1)O,-7.4,13,gemma 3,4-(4-hydroxyphenyl)but-3-en-2-one,
+CC(=O)/C=C/C1=CC=C(C=C1)O,-7.3,13,gemma 3,(E)-4-(4-hydroxyphenyl)but-3-en-2-one,p-hydroxybenzalacetone
+CCOC(=O)/C=C/C1=CC(=C(C=C1)O)O,-7.7,13,gemma 2,"ethyl (E)-3-(3,4-dihydroxyphenyl)prop-2-enoate",ethyl caffeate
+COC(=O)/C=C/C1=CC(=C(C=C1)O)O,-7.3,13,gemma 2,"methyl (E)-3-(3,4-dihydroxyphenyl)prop-2-enoate",methyl caffeate
+COC1=C(C=C(C=C1)/C=C/C(=O)O)O,-7,13,gemma 2,(E)-3-(3-hydroxy-4-methoxyphenyl)prop-2-enoic acid,isoferulic acid
+C1=CC(=CC=C1C=CC)O,-7.1,13,gemma,4-prop-1-enylphenol,
+CCCCCCCC(=O)O,-7.3,12,gemma 5,octanoic acid,octanoic acid
+CCCCCCCCCCCC(=O)O,-7.6,12,gemma 5,dodecanoic acid,lauric acid
+COC(=O)/C=C/C1=CC=C(C=C1)O,-7.3,12,gemma 5,methyl (E)-3-(4-hydroxyphenyl)prop-2-enoate,methyl p-coumarate
+CCOC(=O)/C=C/C1=CC=C(C=C1)O,-7.8,12,gemma 4,ethyl (E)-3-(4-hydroxyphenyl)prop-2-enoate,ethyl coumarate
+CCCCCCCCC(=O)O,-7.4,12,gemma 4,nonanoic acid,nonanoic acid
+CCCCCCC(=O)O,-7.1,12,gemma 4,heptanoic acid,heptanoic acid
+C1=CC(=CC(=C1)O)/C=C/C(=O)O,-7.4,12,gemma 3,(E)-3-(3-hydroxyphenyl)prop-2-enoic acid,m-coumaric acid
+CCCCCCCCCC(=O)O,-7.6,12,gemma 2,decanoic acid,decanoic acid
+C/C=C/C1=CC(=C(C=C1)O)OC,-6.8,12,gemma ,2-methoxy-4-[(E)-prop-1-enyl]phenol,isoeugenol
+COc1c(cc(cc1)C=CC(=O)O)O,-7,11,gpt 120,3-(3-hydroxy-4-methoxyphenyl)prop-2-enoic acid,
+C1=CC(=CC=C1/C=C/C(=O)O)O,-6.9,11,gpt120,(E)-3-(4-hydroxyphenyl)prop-2-enoic acid,p-coumaric acid
+NC(C(=O)O)CCS,-4.6,11,gemma,2-amino-4-sulfanylbutanoic acid,dl-homocysteine
+NC(C(=O)O)CS,-4.3,11,gemma,2-amino-3-sulfanylpropanoic acid,dl-cysteine
+CC(C)=CC1=CC=C(OC)C=C1,-7.3,13,gemma 6,1-methoxy-4-(2-methylprop-1-enyl)benzene,
+CC(C)=CC1=CC=C(C)C=C1,-7.3,13,gemma 6,1-methyl-4-(2-methylprop-1-enyl)benzene,
+CCCCCCCC(=O)OC1=CC=C(C=C1)O,-8.8,13,gemma 6,(4-hydroxyphenyl) octanoate,
+CCCCCCCC(O)C(=O)O,-7.1,13,gemma 7,2-hydroxynonanoic acid,2-hydroxynonanoic acid
+CCCCCCC(O)C(=O)O,-7.1,13,gemma 7,2-hydroxyoctanoic acid,2-hydroxyoctanoic acid
+CCCCCCC=CC=O,-7.1,13,gemma 7,non-2-enal,non-2-enal

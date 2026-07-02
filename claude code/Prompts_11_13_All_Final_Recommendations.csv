@@ -1,0 +1,27 @@
+Rank,SMILES,Docking_Score,Binding_Residues,Frequency,Commercial_Availability,QED,NP_Score,SAS_Score,MW,LogP,Prompt
+1,"C1=CC(=CC=C1/C=C/C(=O)/C=C/C2=CC=C(C=C2)O)O",-9.1,"",4,"",,,,,,13
+2,"CC1=CC[C@H](CC1)C(=C)CCC=C(C)C",-9.0,"",4,"",,,,,,13
+3,"CC(C)S(=O)(=O)CO[C@@H](C)C(=O)O",-8.3,"",7,"",,,,,,11
+4,"Cc1ccc(cc1O)C(=O)C=C(O)[C@H]1O[C@H](O)CO1",-7.9,"",5,"",,,,,,11
+5,"CCOC(=O)/C=C/C1=CC=C(C=C1)O",-7.8,"",4,"",,,,,,12
+6,"CCOC(=O)/C=C/C1=CC(=C(C=C1)O)O",-7.7,"",4,"",,,,,,13
+7,"CC(=CCCC(=CCCC(=CC=O)C)C)C",-7.7,"",4,"",,,,,,13
+8,"Lauric Acid (CCCCCCCCCCCC(=O)O)",-7.6,"",4,"",,,,,,12
+9,"CCCCCCCCC(=O)O",-7.4,"",6,"",,,,,,12
+10,"CC(=O)C=CC1=CC=C(C=C1)O",-7.4,"",4,"",,,,,,13
+11,"CCCCCCCC(=O)O",-7.3,"",7,"",,,,,,12
+12,"COC(=O)/C=C/C1=CC=C(C=C1)O",-7.3,"",7,"",,,,,,12
+13,"Octanoic Acid (CCCCCCCC(=O)O)",-7.3,"",4,"",,,,,,12
+14,"Methyl p-coumarate (COC(=O)/C=C/C1=CC=C(C=C1)O)",-7.3,"",4,"",,,,,,12
+15,"COC(=O)/C=C/C1=CC(=C(C=C1)O)O",-7.3,"",4,"",,,,,,13
+16,"CC(=O)/C=C/C1=CC=C(C=C1)O",-7.3,"",4,"",,,,,,13
+17,"CCCCCCC(=O)O",-7.1,"",7,"",,,,,,12
+18,"CCCCC/C=C(\C)/C=O",-7.0,"",10,"",,,,,,12
+19,"COC1=C(C=C(C=C1)/C=C/C(=O)O)O",-7.0,"",4,"",,,,,,13
+20,"C/C=C/C1=CC(=C(C=C1)O)OC",-6.8,"",10,"",,,,,,12
+21,"C1=CC(=CC(=C1)O)/C=C/C(=O)O (caffeic acid)",,"",2,"",,,,,,11
+22,"C1=CC(=CC=C1/C=C/C(=O)O)O (p‑coumaric)",,"",3,"",,,,,,11
+23,"Ferulic‑acid analogue COc1c(cc(cc1)C=CC(=O)O)O",,"",3,"",,,,,,11
+24,"COc1c(cc(cc1)C=CC(=O)O)O",,"",6,"",,,,,,11
+25,"json{ "ns_result": {"tool":"pubchem","args": {"n_results":10,"smile":"C1=CC(=CC(=C1)O)/[13CH]=[13CH]/[13C](=O)O"}}}",,"",2,"",,,,,,11
+26,"json{ "ns_result": {"tool":"pubchem","args": {"n_results":10,"smile":"C=CC[S@](=O)C[C@@H](C(=O)O)N"}}}",,"",2,"",,,,,,11

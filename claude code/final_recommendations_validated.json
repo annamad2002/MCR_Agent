@@ -1,0 +1,494 @@
+[
+  {
+    "prompt": 6,
+    "model": "qwen3-vl:235b.md",
+    "filename": "6 - qwen3-vl:235b.md",
+    "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O"
+  },
+  {
+    "prompt": 7,
+    "model": "gpt-oss120",
+    "filename": "7 - gpt-oss120",
+    "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O"
+  },
+  {
+    "prompt": 7,
+    "model": "gpt-oss120",
+    "filename": "7 - gpt-oss120",
+    "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 7,
+    "model": "gpt-oss120",
+    "filename": "7 - gpt-oss120",
+    "smiles": "C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 7,
+    "model": "gpt-oss120",
+    "filename": "7 - gpt-oss120",
+    "smiles": "COC1=C(C=CC(=C1)/C=C/C(=O)O[C@@H]2C[C@@](C[C@H]([C@H]2O)O)(C(=O)O)O)O"
+  },
+  {
+    "prompt": 7,
+    "model": "qwen",
+    "filename": "7 - qwen - sas - fail.md",
+    "smiles": "C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 7,
+    "model": "qwen",
+    "filename": "7 - qwen - sas - fail.md",
+    "smiles": "C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 7,
+    "model": "qwen",
+    "filename": "7 - qwen - sas.md",
+    "smiles": "C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 7,
+    "model": "qwen",
+    "filename": "7 - qwen - sas.md",
+    "smiles": "C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 8,
+    "model": "gpt",
+    "filename": "8 - gpt - 20.md",
+    "smiles": "C1[C@H]([C@@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O"
+  },
+  {
+    "prompt": 8,
+    "model": "qwen.md",
+    "filename": "8 - qwen.md",
+    "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed",
+    "filename": "9 - crashed - gemma",
+    "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed",
+    "filename": "9 - crashed - gemma",
+    "smiles": "C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed",
+    "filename": "9 - crashed - gemma",
+    "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed",
+    "filename": "9 - crashed - gemma",
+    "smiles": "C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "C1[C@H]([C@H]([C@@H](C[C@@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "COC1=C(C=CC(=C1)/C=C/C(=O)O[C@@H]2C[C@@](C[C@H]([C@H]2O)O)(C(=O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "crashed 2",
+    "filename": "9 - crashed 2 - gemma",
+    "smiles": "C1C(C(C(CC1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "qwen",
+    "filename": "9 - qwen",
+    "smiles": "C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "qwen",
+    "filename": "9 - qwen",
+    "smiles": "C1=CC(=C(C=C1CC(C(=O)O)OC(=O)C=CC2=CC(=C(C=C2)O)O)O)O"
+  },
+  {
+    "prompt": 9,
+    "model": "unknown",
+    "filename": "9-limited-gpt120",
+    "smiles": "C1[C@H]([C@@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O"
+  },
+  {
+    "prompt": 10,
+    "model": "gemma",
+    "filename": "10 - gemma",
+    "smiles": "C1=CC=C(C=C1O)C=CC(=O)O"
+  },
+  {
+    "prompt": 10,
+    "model": "gemma",
+    "filename": "10 - gemma",
+    "smiles": "C(=CC=C(C1=CC=C(C=C1)O)O)O"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C1=CC(=C(C=C1/C=C/C(=O)O)O)O"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C1=CC(=CC=C1/C=C/C(=O)O)O"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C1=CC=C(C(=C1)/C=C/C(=O)O)O"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C1=CC(=C(C=C1/C=C\\[13C](=O)O)O)O"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C=CC[S@](=O)C[C@@H](C(=O)O)N"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C=CCS(=O)CC(C(=O)O)N"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C=CCSCC(C(=O)O)N"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C=CCS(=O)C[C@@H](C(=O)O)N"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C1=CC(=CC(=C1)O)/C=C/C(=O)O"
+  },
+  {
+    "prompt": 11,
+    "model": "devstral",
+    "filename": "11 - devstral",
+    "smiles": "C=CCSC[C@@H](C(=O)O)N"
+  },
+  {
+    "prompt": 11,
+    "model": "gemma",
+    "filename": "11 - gemma",
+    "smiles": "NC(C(=O)O)CCS"
+  },
+  {
+    "prompt": 11,
+    "model": "gemma",
+    "filename": "11 - gemma",
+    "smiles": "C1=CC(=CC=C1/C=C/C(=O)O)O"
+  },
+  {
+    "prompt": 11,
+    "model": "gemma",
+    "filename": "11 - gemma",
+    "smiles": "C1=CC(=C(C=C1/C=C/C(=O)O)O)O"
+  },
+  {
+    "prompt": 11,
+    "model": "gemma",
+    "filename": "11 - gemma",
+    "smiles": "NC(C(=O)O)CS"
+  },
+  {
+    "prompt": 11,
+    "model": "nemotron",
+    "filename": "11 - nemotron",
+    "smiles": "C1=CC(=CC(=C1)O)/[13CH]=[13CH]/[13C](=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma",
+    "smiles": "C1=CC(=CC(=C1)O)/C=C/C(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma",
+    "smiles": "CC(=CCC/C(=C/C=O)/C)C"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma",
+    "smiles": "C/C=C/C1=CC(=C(C=C1)O)OC"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma",
+    "smiles": "CCCCC/C=C(\\C)/C=O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 2",
+    "smiles": "C1=CC(=CC(=C1)O)/C=C/C(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 2",
+    "smiles": "CCCCCCCCC(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 2",
+    "smiles": "CCCCCCCCCC(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 2",
+    "smiles": "CCCCCCCCCCCC(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 2",
+    "smiles": "CC(=CCC/C(=C\\C=O)/C)C"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 3",
+    "smiles": "CCCCCCCCCC(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 3",
+    "smiles": "C1=CC(=CC(=C1)O)/C=C/C(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 3",
+    "smiles": "CC(=CCC/C(=C/C=O)/C)C"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 4",
+    "smiles": "CCOC(=O)/C=C/C1=CC=C(C=C1)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 4",
+    "smiles": "CCCCCCCCC(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 4",
+    "smiles": "CCCCCCCC(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 4",
+    "smiles": "COC(=O)/C=C/C1=CC=C(C=C1)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 4",
+    "smiles": "CCCCCCC(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 5",
+    "smiles": "CCCCCCCC(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 5",
+    "smiles": "CCCCCCCCCCCC(=O)O"
+  },
+  {
+    "prompt": 12,
+    "model": "gemma",
+    "filename": "12 - gemma - 5",
+    "smiles": "COC(=O)/C=C/C1=CC=C(C=C1)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma",
+    "filename": "13 - gemma",
+    "smiles": "C1=CC(=CC=C1C=CC)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma",
+    "filename": "13 - gemma",
+    "smiles": "CC(C)=CCC(C)=CCC(C)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 2",
+    "filename": "13 - gemma 2",
+    "smiles": "CCOC(=O)/C=C/C1=CC(=C(C=C1)O)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 2",
+    "filename": "13 - gemma 2",
+    "smiles": "COC(=O)/C=C/C1=CC(=C(C=C1)O)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 2",
+    "filename": "13 - gemma 2",
+    "smiles": "COC1=C(C=C(C=C1)/C=C/C(=O)O)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 3",
+    "filename": "13 - gemma 3",
+    "smiles": "C1=CC(=CC=C1/C=C/C(=O)/C=C/C2=CC=C(C=C2)O)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 3",
+    "filename": "13 - gemma 3",
+    "smiles": "CC1=CC[C@H](CC1)C(=C)CCC=C(C)C"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 3",
+    "filename": "13 - gemma 3",
+    "smiles": "CC(=CCCC(=CCCC(=CC=O)C)C)C"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 3",
+    "filename": "13 - gemma 3",
+    "smiles": "CC(=O)C=CC1=CC=C(C=C1)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 3",
+    "filename": "13 - gemma 3",
+    "smiles": "CC(=O)/C=C/C1=CC=C(C=C1)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 4",
+    "filename": "13 - gemma 4",
+    "smiles": "CCCCCCC=CC(=O)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 4",
+    "filename": "13 - gemma 4",
+    "smiles": "CCCCC=CC(=O)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 4",
+    "filename": "13 - gemma 4",
+    "smiles": "CC(C)=CCC(C)=CCO"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 4",
+    "filename": "13 - gemma 4",
+    "smiles": "CCCC=CC(=O)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 4",
+    "filename": "13 - gemma 4",
+    "smiles": "CCCCC/C=C(\\C)/C=O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 5",
+    "filename": "13 - gemma 5",
+    "smiles": "C1=CC=C(C=C1)CC2=C(C=C(C=C2)O)O"
+  },
+  {
+    "prompt": 13,
+    "model": "gemma 5",
+    "filename": "13 - gemma 5",
+    "smiles": "C1=CC(=CC=C1CC2=CC=C(C=C2)O)O"
+  }
+]

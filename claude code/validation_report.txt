@@ -1,0 +1,649 @@
+SMILES VALIDATION REPORT
+================================================================================
+
+Generated: Rank,SMILES,Binding_Affinity_kcal_mol,Model,Prompt,Previously_Found,Compound_Name,Binding_Residues
+
+
+Total final recommendations found: 82
+Unique SMILES in final recommendations: 53
+Total SMILES in master CSV: 199
+
+DISCREPANCIES:
+Missing in CSV (in final recs but not CSV): 5
+Extra in CSV (in CSV but not from final recs): 151
+
+
+MISSING SMILES (need to be added to CSV):
+--------------------------------------------------------------------------------
+
+Prompt 8:
+  Model: gpt
+  SMILES: C1[C@H]([C@@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O
+
+Prompt 9:
+  Model: unknown
+  SMILES: C1[C@H]([C@@H]([C@H](C[C@@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O
+
+Prompt 11:
+  Model: devstral
+  SMILES: C1=CC(=C(C=C1/C=C\[13C](=O)O)O)O
+  Model: nemotron
+  SMILES: C1=CC(=CC(=C1)O)/[13CH]=[13CH]/[13C](=O)O
+
+Prompt 12:
+  Model: gemma
+  SMILES: CCCCC/C=C(\C)/C=O
+  Model: gemma
+  SMILES: CC(=CCC/C(=C\C=O)/C)C
+
+Prompt 13:
+  Model: gemma 4
+  SMILES: CCCCC/C=C(\C)/C=O
+
+
+EXTRA SMILES (should be removed or verified):
+--------------------------------------------------------------------------------
+SMILES: C(=CC=C(C1=CC=C(C=C1)OC)O)O
+  Rank: 52
+  Model: gemma
+  Prompt: 10
+SMILES: C(Br)(Br)Br
+  Rank: 176
+  Model: gemma - 2
+  Prompt: 12
+SMILES: C(Br)Br
+  Rank: 175
+  Model: gemma - 2
+  Prompt: 12
+SMILES: C(C(C(=O)O)N)S
+  Rank: 172
+  Model: gemma 3
+  Prompt: 13
+SMILES: C(I)(I)I
+  Rank: 179
+  Model: gemma - 5
+  Prompt: 12
+SMILES: C/C(=C\\CCC(=C)C=C)/CC/C=C(\\C)/C=O
+  Rank: 29
+  Model: gemma - 2
+  Prompt: 12
+SMILES: C/C=C/C(=O)O
+  Rank: 121
+  Model: gemma
+  Prompt: 13
+SMILES: C/C=C/S(=O)C[C@@H](C(=O)O)N
+  Rank: 135
+  Model: gemma
+  Prompt: 11
+SMILES: C/C=C/S(=O)C[C@@H](C(=O)[O-])[NH3+]
+  Rank: 151
+  Model: nemotron
+  Prompt: 11
+SMILES: C1=C(C=C(C=C1O)O)C2=C(C=C(C=C2O)O)O
+  Rank: 54
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=C(C(=C1)O)O)O
+  Rank: 169
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1)/C=C/C(=O)O)O
+  Rank: 104
+  Model: gemma
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1)O)/C=C/C(=O)O
+  Rank: 105
+  Model: gemma 4
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1/C=C/C(=O)O[C@@H](CO)[C@@H](C2=CC(=C(C=C2)O)O)O)O)O
+  Rank: 17
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1/C=C/C(=O)O[C@@H](CO)[C@H](C2=CC(=C(C=C2)O)O)O)O)O
+  Rank: 16
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1/C=C/C2=CC(=CC(=C2)O)O)O)O
+  Rank: 26
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1/C=C/C2=CC(=CC(=C2)O[C@H]3[C@@H]([C@H]([C@@H]([C@H](O3)CO)O)O)O)O)O)O
+  Rank: 8
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1/C=C/C=O)O)O
+  Rank: 80
+  Model: gemma 3
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1/C=C\\C(=O)O)O)O
+  Rank: 63
+  Model: qwen
+  Prompt: 11
+SMILES: C1=CC(=C(C=C1/C=C\\\\C(=O)O)O)O
+  Rank: 108
+  Model: nemotron
+  Prompt: 11
+SMILES: C1=CC(=C(C=C1C(=O)O)O)O
+  Rank: 116
+  Model: gemma 2
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1C=CC(=O)O)O)O
+  Rank: 66
+  Model: nemotron
+  Prompt: 11
+SMILES: C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=C(C(=C(C=C2)O)O)/C=C/C3=CC(=C(C=C3)O)O)O)O
+  Rank: 5
+  Model: gemma - 2
+  Prompt: 12
+SMILES: C1=CC(=C(C=C1O)C2=CC(=C(C=C2O)C3=CC(=C(C=C3)O)O)O)O
+  Rank: 13
+  Model: gemma
+  Prompt: 10
+SMILES: C1=CC(=C(C=C1O)O)/C=C/C2=CC(=CC(=C2)O)O
+  Rank: 31
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=C(C=C1O)O)C(=O)O
+  Rank: 76
+  Model: gemma
+  Prompt: 10
+SMILES: C1=CC(=C(C=C1O)O)C2=C(C=C(C=C2)O)O
+  Rank: 53
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=CC=C1/C=C(\\C(=O)O)/F)O
+  Rank: 75
+  Model: gemma - 4
+  Prompt: 12
+SMILES: C1=CC(=CC=C1/C=C/C(=O)O)[O-]
+  Rank: 57
+  Model: nemotron
+  Prompt: 11
+SMILES: C1=CC(=CC=C1/C=C/C2=CC(=CC(=C2)O)O)O
+  Rank: 30
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=CC=C1/C=C/C2=CC(=CC(=O)O2)O)O
+  Rank: 20
+  Model: gemma - 4
+  Prompt: 12
+SMILES: C1=CC(=CC=C1/C=C/C=O)O
+  Rank: 70
+  Model: gemma - 5
+  Prompt: 12
+SMILES: C1=CC(=CC=C1/C=C/CO)O
+  Rank: 77
+  Model: gemma 3
+  Prompt: 13
+SMILES: C1=CC(=CC=C1/C=C\\C(=O)O)O
+  Rank: 73
+  Model: gemma
+  Prompt: 11
+SMILES: C1=CC(=CC=C1/C=C\\C2=CC(=CC(=C2)O)O)O
+  Rank: 38
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(=CC=C1/C=C\\\\C(=O)O)O
+  Rank: 69
+  Model: nemotron
+  Prompt: 11
+SMILES: C1=CC(=CC=C1C=C(C#N)C(=O)O)O
+  Rank: 87
+  Model: gemma - 4
+  Prompt: 12
+SMILES: C1=CC(=CC=C1CCC2=CC(=CC(=C2)O)O)O
+  Rank: 24
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC(C=C1)C=CC(=O)O
+  Rank: 49
+  Model: gemma
+  Prompt: 13
+SMILES: C1=CC2C3C=CC=C3C=CC2=C1
+  Rank: 84
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC=C(C(=C1)/C=C/C=O)O
+  Rank: 97
+  Model: gemma - 4
+  Prompt: 12
+SMILES: C1=CC=C(C(=C1)/C=C\\C(=O)O)O
+  Rank: 122
+  Model: gemma - 4
+  Prompt: 12
+SMILES: C1=CC=C(C(=C1)/C=C\\\\C(=O)O)O
+  Rank: 120
+  Model: nemotron
+  Prompt: 11
+SMILES: C1=CC=C(C(=C1)/C=C\\\\C(=O)O)[O-]
+  Rank: 99
+  Model: nemotron
+  Prompt: 11
+SMILES: C1=CC=C(C(=C1)C(=O)O)N
+  Rank: 141
+  Model: gemma 2
+  Prompt: 13
+SMILES: C1=CC=C(C(=C1)CC2=CC=C(C=C2)O)O
+  Rank: 48
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1=CC=C(C=C1)C(=O)O
+  Rank: 131
+  Model: gemma
+  Prompt: 13
+SMILES: C1=CC=C(C=C1)C2=C(C=CC(=C2)O)O
+  Rank: 68
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1CC2C=CC=CC2=C1
+  Rank: 119
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1CC2CC=CC=C2C1
+  Rank: 126
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1CC2CCC=C2C=C1
+  Rank: 107
+  Model: gemma 5
+  Prompt: 13
+SMILES: C1CC=C2C=CCC2C1
+  Rank: 129
+  Model: gemma 5
+  Prompt: 13
+SMILES: C=CCS(=O)C[C@@H](C(=O)N)O
+  Rank: 137
+  Model: gpt120
+  Prompt: 11
+SMILES: C=CC[S][C@@H](C(=O)O)N
+  Rank: 168
+  Model: gemma 4
+  Prompt: 13
+SMILES: CC(=C)C1=CC=CC=C1
+  Rank: 117
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC(=CCC/C(=C\\C=O)/C)C
+  Rank: 56
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC(=CCCC(=C)C=C)CCC=C(C)C=O
+  Rank: 22
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC(=CCCC(=CC=O)C)C
+  Rank: 67
+  Model: gemma 4
+  Prompt: 13
+SMILES: CC(=O)/C=C/C1=CC=CC=C1O
+  Rank: 100
+  Model: gemma - 4
+  Prompt: 12
+SMILES: CC(C)=CCC(C)=C1CCC(C1)C=C
+  Rank: 9
+  Model: gemma 4
+  Prompt: 13
+SMILES: CC(C)=CCC(C)=CC(C)C
+  Rank: 12
+  Model: gemma 4
+  Prompt: 13
+SMILES: CC(C1=CC(=C(C=C1)O)C)C
+  Rank: 136
+  Model: gemma
+  Prompt: 13
+SMILES: CC(C1=CC=CC=C1)C2=C(C=C(C=C2)O)O
+  Rank: 39
+  Model: gemma 5
+  Prompt: 13
+SMILES: CC(C1CCC(CC1)O)C
+  Rank: 123
+  Model: gemma
+  Prompt: 13
+SMILES: CC1=CC(=C(C=C1)C(C)C)O
+  Rank: 118
+  Model: gemma
+  Prompt: 13
+SMILES: CC1=CC(=C(C=C1)O)OC
+  Rank: 160
+  Model: gemma - 4
+  Prompt: 12
+SMILES: CC1=CC=C(C=C1)C
+  Rank: 145
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC1=CC=C(C=C1)C(C)C
+  Rank: 115
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC1=CC=CC=C1C
+  Rank: 164
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC1=CCC(=CC1)C(C)C
+  Rank: 133
+  Model: gemma - 5
+  Prompt: 12
+SMILES: CC1=CCC(CC1)C(=C)C
+  Rank: 111
+  Model: gemma - 3
+  Prompt: 12
+SMILES: CC1=CCC(CC1)C(=CCC=C(C)C)C
+  Rank: 14
+  Model: gemma 3
+  Prompt: 13
+SMILES: CC1=CCC(CC1)C(C)O
+  Rank: 103
+  Model: gemma
+  Prompt: 13
+SMILES: CC1=CCC2CC1C2(C)C
+  Rank: 146
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC1=CC[C@@H](CC1)C(=C)C
+  Rank: 130
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC1=CC[C@@H]2C[C@H]1C2(C)C
+  Rank: 144
+  Model: gemma - 5
+  Prompt: 12
+SMILES: CC1=CC[C@H](CC1)C(=C)C
+  Rank: 110
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC1=CC[C@H]2C[C@@H]1C2(C)C
+  Rank: 157
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CC1C=CCC2C1C=CC2
+  Rank: 128
+  Model: gemma 5
+  Prompt: 13
+SMILES: CC1C=CCCC1C(=C)C
+  Rank: 163
+  Model: gemma 5
+  Prompt: 13
+SMILES: CC1CC2CCC1(C)C2=O
+  Rank: 143
+  Model: gemma
+  Prompt: 13
+SMILES: CC1CC2CCC1(C)C2O
+  Rank: 158
+  Model: gemma
+  Prompt: 13
+SMILES: CC1CC=C(CC1C)C
+  Rank: 167
+  Model: gemma 5
+  Prompt: 13
+SMILES: CC1CC=CC(C1)C(=C)C
+  Rank: 85
+  Model: gemma 5
+  Prompt: 13
+SMILES: CC1CCC=C(C1C)C
+  Rank: 152
+  Model: gemma 5
+  Prompt: 13
+SMILES: CCC(C)(C)C(=O)O[C@H]1C[C@H](C=C2[C@H]1[C@H]([C@H](C=C2)C)CC[C@@H]3C[C@H](CC(=O)O3)O)C
+  Rank: 3
+  Model: gemma - 5
+  Prompt: 12
+SMILES: CCC1=CC=CC=C1
+  Rank: 92
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CCC=CC(=O)O
+  Rank: 78
+  Model: gemma 4
+  Prompt: 13
+SMILES: CCCC(=O)O
+  Rank: 140
+  Model: gemma
+  Prompt: 13
+SMILES: CCCC(C)C(=O)O
+  Rank: 93
+  Model: gemma 4
+  Prompt: 13
+SMILES: CCCC/C=C(\\CC)/C=O
+  Rank: 82
+  Model: gemma - 4
+  Prompt: 12
+SMILES: CCCC1=CC(=C(C=C1)O)OC
+  Rank: 95
+  Model: gemma - 5
+  Prompt: 12
+SMILES: CCCCC(C)C(=O)O
+  Rank: 81
+  Model: gemma 4
+  Prompt: 13
+SMILES: CCCCC/C=C(\\C)/C=O
+  Rank: 60
+  Model: gemma - 4
+  Prompt: 12
+SMILES: CCCCCCCCCCCCCCCC(=O)O
+  Rank: 36
+  Model: gemma - 2
+  Prompt: 12
+SMILES: CCOC(=O)C1=CC(=C(C(=C1)O)O)O
+  Rank: 83
+  Model: gemma
+  Prompt: 13
+SMILES: CCOC(=O)C1=CC=CC=C1N
+  Rank: 91
+  Model: gemma 4
+  Prompt: 13
+SMILES: CC[C@H](C)C(=O)O[C@H]1C[C@H](C=C2[C@H]1[C@H]([C@H](C=C2)C)CC[C@@H]3C[C@H](CC(=O)O3)O)C
+  Rank: 2
+  Model: gemma - 3
+  Prompt: 12
+SMILES: CNC1=CC=CC=C1C(=O)OC
+  Rank: 166
+  Model: gemma 5
+  Prompt: 13
+SMILES: COC(=O)/C=C/C1=CC(=C(C=C1)O)OC
+  Rank: 109
+  Model: gemma
+  Prompt: 13
+SMILES: COC(=O)C1=CC(=C(C(=C1)O)O)O
+  Rank: 149
+  Model: gemma
+  Prompt: 13
+SMILES: COC(=O)C1=CC=C(C=C1)N
+  Rank: 96
+  Model: gemma
+  Prompt: 13
+SMILES: COC(=O)[C@@H](N)C[S@](=O)CC=C
+  Rank: 155
+  Model: gemma - 5
+  Prompt: 12
+SMILES: COC1=C(C(=CC=C1)OC)C(=O)O
+  Rank: 147
+  Model: gemma 2
+  Prompt: 13
+SMILES: COC1=C(C=C(C=C1)/C=C/C(=O)O)OC
+  Rank: 106
+  Model: gemma 2
+  Prompt: 13
+SMILES: COC1=C(C=C(C=C1)C2=CC(=O)C3=C(C=C(C=C3O2)O)O)O
+  Rank: 10
+  Model: gemma 5
+  Prompt: 13
+SMILES: COC1=C(C=C(C=C1)CC=C)OC
+  Rank: 156
+  Model: gemma - 2
+  Prompt: 12
+SMILES: COC1=C(C=CC(=C1)/C=C/C(=O)O)O
+  Rank: 98
+  Model: gemma - 5
+  Prompt: 12
+SMILES: COC1=C(C=CC(=C1)/C=C/C(=O)OC)O
+  Rank: 94
+  Model: gemma 2
+  Prompt: 13
+SMILES: COC1=C(C=CC(=C1)/C=C/C=O)O
+  Rank: 89
+  Model: gemma - 5
+  Prompt: 12
+SMILES: COC1=C(C=CC(=C1)C=C)O
+  Rank: 138
+  Model: gemma - 2
+  Prompt: 12
+SMILES: COC1=C(C=CC(=C1)C=CC)O
+  Rank: 64
+  Model: gemma
+  Prompt: 13
+SMILES: COC1=C(C=CC(=C1)CC=C)O
+  Rank: 86
+  Model: gemma - 3
+  Prompt: 12
+SMILES: COC1=CC(=C(C(=C1)O)OC)C(=O)O
+  Rank: 159
+  Model: gemma
+  Prompt: 13
+SMILES: COC1=CC(=C(C=C1)C=CC(=O)O)OC
+  Rank: 125
+  Model: gemma
+  Prompt: 10
+SMILES: COC1=CC(=C(C=C1)C=CC)O
+  Rank: 74
+  Model: gemma
+  Prompt: 13
+SMILES: COC1=CC(=C(C=C1)C=CC)OC
+  Rank: 154
+  Model: gemma
+  Prompt: 13
+SMILES: COC1=CC(=C(C=C1)C=O)O
+  Rank: 127
+  Model: gemma
+  Prompt: 13
+SMILES: COC1=CC(=C(C=C1)O)C(=O)O
+  Rank: 132
+  Model: gemma
+  Prompt: 10
+SMILES: COC1=CC(=C(C=C1)OC)C=CC(=O)O
+  Rank: 114
+  Model: gemma 4
+  Prompt: 13
+SMILES: COC1=CC(=C(C=C1O)C(=O)O)OC
+  Rank: 148
+  Model: gemma
+  Prompt: 10
+SMILES: COC1=CC(=C(C=C1OC)C=CC(=O)O)O
+  Rank: 112
+  Model: gemma
+  Prompt: 13
+SMILES: COC1=CC(C=C1)C=CC(=O)O
+  Rank: 45
+  Model: gemma
+  Prompt: 13
+SMILES: COC1=CC=C(C=C1)C(=O)O
+  Rank: 124
+  Model: gemma 2
+  Prompt: 13
+SMILES: COC1=CC=C(C=C1)C=CC(=O)O
+  Rank: 62
+  Model: gemma
+  Prompt: 13
+SMILES: COc1=CC(=C(C=C1C=CC(=O)O)OC)O
+  Rank: 101
+  Model: gemma
+  Prompt: 11
+SMILES: COc1=CC(=CC=C1C=CC(=O)O)O
+  Rank: 113
+  Model: gemma
+  Prompt: 11
+SMILES: COc1c(cc(cc1)C=CC(=O)O)O
+  Rank: 58
+  Model: gpt120
+  Prompt: 11
+SMILES: CS(=O)CC[C@@H](C(=O)O)N
+  Rank: 165
+  Model: nemotron
+  Prompt: 11
+SMILES: CS(C)C(N)C(=O)O
+  Rank: 171
+  Model: gemma
+  Prompt: 11
+SMILES: NC1=CC=CC=C1C(=O)O
+  Rank: 142
+  Model: gemma
+  Prompt: 13
+SMILES: O=C1C=CC=CC2=C1C=C(O)C=C2O
+  Rank: 79
+  Model: gemma
+  Prompt: 13
+SMILES: O=C1C=CC=CC2=C1C=C(OC)C=C2O
+  Rank: 71
+  Model: gemma
+  Prompt: 13
+SMILES: O=C1C=CC=CC2=C1C=CC=C2O
+  Rank: 88
+  Model: gemma
+  Prompt: 13
+SMILES: O=[N+]([O-])CCCCc1ccc(C#N)cc1
+  Rank: 188
+  Model: unknown
+  Prompt: 4
+SMILES: O=[N+]([O-])CCCCc1ccc(C#N)cc1F
+  Rank: 189
+  Model: unknown
+  Prompt: 4
+SMILES: O=[N+]([O-])CCCCc1ccc(C(F)(F)F)cc1
+  Rank: 184
+  Model: unknown
+  Prompt: 4
+SMILES: O=[N+]([O-])OCCCCc1ccc(C#N)cc1
+  Rank: 196
+  Model: unknown
+  Prompt: 1
+SMILES: O=[N+]([O-])OCCCCc1ccc(C#N)cc1F
+  Rank: 181
+  Model: unknown
+  Prompt: 1
+SMILES: O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1
+  Rank: 182
+  Model: unknown
+  Prompt: 1
+SMILES: O=[N+]([O-])OCCCCc1ccc(F)cc1
+  Rank: 186
+  Model: unknown
+  Prompt: 1
+SMILES: O=[N+]([O-])OCCCCc1ccc(O)cc1
+  Rank: 185
+  Model: unknown
+  Prompt: 1
+SMILES: O=[N+]([O-])OCCCCc1ccc([N+](=O)[O-])cc1
+  Rank: 190
+  Model: unknown
+  Prompt: 1
+SMILES: O=[N+]([O-])c1ccc(C#N)cc1
+  Rank: 199
+  Model: unknown
+  Prompt: 4
+SMILES: O=[N+]([O-])c1ccc(C#N)cc1F
+  Rank: 197
+  Model: unknown
+  Prompt: 4
+SMILES: O=[N+]([O-])c1ccc(C(F)(F)F)cc1
+  Rank: 195
+  Model: unknown
+  Prompt: 4
+SMILES: O=[N+]([O-])c1ccc(F)cc1
+  Rank: 198
+  Model: unknown
+  Prompt: 4
+SMILES: OC1=CC(=C(C=C1C(=O)O)O)O
+  Rank: 139
+  Model: gemma 2
+  Prompt: 13
+SMILES: [13CH](Br)(Br)Br
+  Rank: 177
+  Model: gemma - 2
+  Prompt: 12
+SMILES: [2H]C(Br)(Br)Br
+  Rank: 178
+  Model: gemma - 2
+  Prompt: 12
+SMILES: [2H]C([2H])(Br)Br
+  Rank: 174
+  Model: gemma - 2
+  Prompt: 12

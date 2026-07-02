@@ -1,0 +1,11 @@
+Rank,SMILES,Compound_Name,Docking_Score,Binding_Residues,QED,NP_Score,SAS_Score,MW,LogP,Prompt
+1,"C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)O)O","",-9.9,"",0.156,,,,1.03,7
+2,"C1C(C[C@H](C([C@@H]1OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)OC(=O)/C=C/C3=CC(=C(C=C3)O)O)(O)C(=O)O","",-9.5,"F43602",,1.35,3.83,,,9
+3,"C1[C@H]([C@@H]([C@@H](C[C@]1(C(=O)O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O","",-8.2,"",0.234,,,,-0.65,7
+4,"O=[N+]([O-])OCCCCc1ccc(C#N)cc1F","",,"",0.432,,,,2.23,1
+5,"O=[N+]([O-])OCCCCc1ccc(C(F)(F)F)cc1","",,"",0.449,,,,3.24,1
+6,"O=[N+]([O-])CCCCc1ccc(C(F)(F)F)cc1","",,"",,,,,3.30,2
+7,"O=[N+]([O-])CCCCc1ccc(C#N)cc1","",,"",,,,,2.16,2
+8,"O=[N+]([O-])c1ccc(C(F)(F)F)cc1","",,"",,,,,,4
+9,"O=[N+]([O-])c1ccc(C#N)cc1F","",,"",,,,,,4
+10,"C1=CC(=C(C=C1C[C@H](C(=O)O)OC(=O)/C=C/C2=CC(=C(C=C2)O)O)O)O","",,"Arg68, Gln330, Glu66 … (see contacts)",0.298,,,,1.76,8

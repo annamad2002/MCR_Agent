@@ -1,0 +1,101 @@
+{
+  "search_summary": {
+    "total_compounds_searched": 110,
+    "search_date": "2026-06-30",
+    "search_strategy": "Systematic literature search using WebSearch tool for MCR inhibition and methane reduction in ruminants",
+    "key_findings": "Multiple natural and synthetic compounds have demonstrated MCR inhibition potential in ruminants. Known inhibitors include bromoform, 3-nitrooxypropanol (3-NOP), bromoethane sulfonate (BES), and various plant-derived polyphenols."
+  },
+  "compounds_with_literature": {
+    "Lovastatin": "Anti-methanogenic compound that inhibited methanogenesis in sheep by 55% (high doses), goats by 33-39%, and cattle by ~37% (low-dose). Mechanism: Competitive inhibitor of HMG-CoA reductase, which is rate-limiting for mevalonate pathway required for polyprenol biosynthesis in methanogenic archaeal membranes. Multiple studies published in Journal of Animal Science and Biotechnology and Frontiers.",
+    "Bromoform": "Halogenated methane analog found in seaweeds (Asparagopsis taxiformis). Potent MCR inhibitor - binds to reduced vitamin B12, inhibiting cobalamin-dependent methyltransferase step. Linear reduction in methane yield from 50-60 mg/kg dry matter intake. Achieves up to 94% methane yield reduction in beef cattle. Published in mBio and ScienceDirect.",
+    "Dibromomethane": "Structurally related MCR inhibitor with longer half-life than bromoform (775 minutes vs 26 minutes). Demonstrated sigmoidal dose-response relationship at 1-2 µM. Produced by rumen bacteria as transformation product of bromoform. Published in Scientific Reports and Frontiers.",
+    "Iodoform": "Halomethane compound with methanogenic inhibition potential. Explored as alternative to bromoform with potentially fewer carcinogenic concerns. Studied for metabolism and excretory pathways in dairy cows. Published in Journal of Dairy Science.",
+    "3-Nitrooxypropanol (3-NOP, Bovaer)": "Most successful synthetic MCR inhibitor to date. Specifically targets MCR by binding to active site with nitrate group in electron-transfer distance to Ni(I). Inactivates MCR by oxidation of Ni(I) at µM concentrations. Reduces methane by ~30% in cows. Commercially approved feed additive. Multiple publications in PNAS, Microbiome, and Frontiers.",
+    "Bromoethane sulfonate (BES)": "Specific MCR inhibitor - IC50 of 4 µM. Mechanism: electrophilic attack on Ni(I), alkylation and oxidation to Ni(III), yielding ethylene and sulfite. Limited in vivo effectiveness due to negative charge preventing membrane diffusion. Requires >1 mM for in vivo inhibition. Published in multiple peer-reviewed journals.",
+    "Salvianolic acid C": "Potent natural MCR inhibitor identified via molecular docking. Binding energy: -8.2 kcal/mol to F430 active site. IC50: 692.3 µmol/L. In vitro supplementation at 1.5 mg/g DM significantly reduced CH4 without affecting fermentation. Dual mechanism: direct enzymatic inhibition and microbial community modulation. Published in Journal of Animal Science and Biotechnology (2025).",
+    "Eugenol": "Essential oil compound with methane-reducing potential. 30 µL reduced methane production in in vitro systems. Effectiveness varies by dose, formulation, and context - did not show benefit in mid-lactation Holstein dairy cows at 1.2 g/day. Mechanism: likely through protozoal inhibition. Published in Academia.edu and Journal of Dairy Science.",
+    "Citral": "Component of lemongrass and lemon essential oils. Limited specific MCR data found, but general essential oil research indicates terpene-based oils can achieve moderate, dose-dependent methane reductions. Requires further specific research. Referenced in broader essential oil methane mitigation studies.",
+    "Limonene": "Monoterpene from citrus oils and peppermint. General terpenoid essential oils produce moderate, dose-dependent methane reductions with minimal fermentation impact. Specific MCR binding data not found in literature search, but fits category of terpene methane inhibitors.",
+    "p-Cymene": "Monoterpene from essential oils. Known inhibitor but specific MCR data limited. Part of terpenoid essential oil category that produces moderate methane reductions. Referenced in broader essential oil studies but requires targeted research for MCR specificity.",
+    "Capric acid (C10)": "Medium-chain fatty acid (MCFA) that decreases methane production in in vitro rumen fermentation. Mechanism: antibacterial, antifungal, or antiprotozoal properties rather than direct MCR inhibition. Causes K+ ion leakage and decreases Methanobrevibacter ruminantium survival. Published in Cambridge Core and Scientific Reports.",
+    "Lauric acid (C12)": "Medium-chain fatty acid with dual mechanism: direct methanogen inhibition and antiprotozoal properties. Rumen transcriptome studies show response of Methanobrevibacter ruminantium to lauric acid inhibition. Published in PLOS ONE and Nature.",
+    "Hexanoic acid (C6)": "Short-chain fatty acid related to medium-chain fatty acids. Limited specific MCR literature found, but fatty acid derivatives show inverse relationship with propionate production.",
+    "Octanoic acid (C8)": "Medium-chain fatty acid in methane-inhibiting range. Research shows fatty acid derivatives can affect methane and propionate production relationship.",
+    "Ferulic acid": "Hydroxycinnamic acid and phenolic compound. Significantly decreases CH4 production in in vitro rumen fermentation. Metabolized by rumen bacteria possessing feruloyl esterases (B. fibrisolvens, Megasphaera elsdenii, R. albus). Potent monomeric antioxidant. Published in Wiley Online Library and DOI 10.3390/fermentation.",
+    "Caffeic acid": "Phenolic acid that serves as rumen CH4 inhibitor. Modulates methanogenesis mainly by affecting cellulolytic bacterial growth in vitro. Significantly decreases CH4 with high-forage or high-concentrate substrates. Published in Journal of the Science of Food and Agriculture.",
+    "p-Coumaric acid": "Hydroxycinnamic acid with antioxidant and antibacterial effects. Extracted from plants like fenugreek. Part of phenolic acid group that significantly reduces CH4 production. Referenced in fenugreek methane mitigation studies.",
+    "Chlorogenic acid": "Phenolic compound with antioxidant, anticancer, and antibacterial effects. Extracted from various plants. Part of polyphenolic compounds investigated for methane reduction. Referenced in broader polyphenol studies.",
+    "Cinnamaldehyde": "Main active compound of cinnamon oil. Essential oil that interacts with microbial membranes, specifically inhibiting Gram-positive and Gram-negative bacteria, resulting in methanogenesis inhibition. Decreases total VFA, gas, and methane at highest doses. Effects vary by diet composition. Published in ScienceDirect and PMC.",
+    "trans-Cinnamic acid": "Cinnamon-derived compound related to cinnamaldehyde. Limited specific MCR data but part of hydroxycinnamic acid category studied for methane reduction.",
+    "Polyphenols and Tannins": "General category: condensed tannins and hydrolyzable tannins reduce methane production. Mechanisms: hydrogen bonding and hydrophobic interactions with microbial enzymes, inhibition of fiber digestion, or direct interaction with rumen microbiota. Molecular docking analysis indicates polyphenolic compounds can interact directly with MCR. Published in multiple sources including Frontiers and ScienceDirect.",
+    "Garlic and allyl sulfur compounds": "Garlic contains allicin, diallyl sulphide, diallyl disulphide, and allyl mercaptan. Reports of inconsistent CH4 reduction effects. Mechanisms: direct inhibition of methanogenic archaea and suppression of HMG-CoA reductase. Garlic oil achieved greatest methane inhibition among essential oils tested. Published in MDPI and Frontiers.",
+    "Tea polyphenols": "Inhibit methanogenesis and improve rumen epithelial transport in dairy cows. Part of broader polyphenol research for methane mitigation. Published in PMC.",
+    "Neem extracts": "Neem leaf extracts tested as phytogenic rumen modulators. Tended to reduce methane emissions in lambs, though higher inclusion levels and standardization needed. Published in PMC.",
+    "Essential oils (general)": "Diverse group of plant-derived compounds with dose-dependent methane reduction potential. Terpenoid oils produce moderate reductions with minimal fermentation impact. Non-terpenoid oils (like garlic) show stronger but more variable effects. Mechanisms include membrane interaction and selective methanogen inhibition. Comprehensive reviews in Frontiers and ScienceDirect.",
+    "Nanoparticles": "Functionalized biological polyhydroxybutyrate (PHB) nanoparticles and modified clay nanocomposites show promise for methane reduction by inhibiting rumen methanogens. Emerging technology for methane mitigation. Published in Frontiers Microbiology.",
+    "Nitrate and nitrite": "Potent inhibitors of methanogenesis via indirect pathways. Nitrate serves as alternative electron sink to methane production. 3-NOP reduces to nitrite which also inactivates MCR. Both mechanisms contribute to methane reduction. Published in PNAS and Frontiers."
+  },
+  "compounds_without_specific_literature": {
+    "note": "The following compounds either had no specific MCR inhibition studies found, or only appeared in very general contexts",
+    "compounds": [
+      "Various cinnamic acid esters (methyl, ethyl esters)",
+      "Most di- and tri-hydroxyphenol derivatives without specific methane studies",
+      "Novel polyphenolic compounds from molecular docking that haven't been experimentally tested for MCR",
+      "Synthetic nitro-compounds (various benzonitrile derivatives) - may have MCR potential but not yet published",
+      "Andrographolide - no specific literature found despite being from neem family",
+      "Benzalkonium compounds - no specific ruminant methane literature found",
+      "Various terpenes without commercial availability or published ruminant studies",
+      "Many unique compounds generated by AI molecular design - not yet synthesized or tested"
+    ]
+  },
+  "key_research_sources": {
+    "highly_cited_reviews": [
+      "Methyl coenzyme M reductase as a target for inhibition of methanogenesis in ruminants: challenges and opportunities (2025, Frontiers in Microbiology)",
+      "Mitigation strategies for methane emissions in ruminant livestock: a comprehensive review (2025, Frontiers in Animal Science)",
+      "Salvianolic acid C inhibits methane emissions in dairy cows by targeting MCR and reshaping the rumen microbial community (2025, Journal of Animal Science and Biotechnology)",
+      "A Review of 3-Nitrooxypropanol for Enteric Methane Mitigation from Ruminant Livestock (PMC)"
+    ],
+    "key_journals": [
+      "Journal of Dairy Science",
+      "PNAS (Proceedings of the National Academy of Sciences)",
+      "Frontiers in Microbiology",
+      "Frontiers in Animal Science",
+      "Journal of Animal Science and Biotechnology",
+      "Scientific Reports",
+      "ScienceDirect (Multiple journals)",
+      "mBio",
+      "Microbiome"
+    ],
+    "databases_searched": [
+      "PubMed Central (PMC)",
+      "PubMed",
+      "Google Scholar patterns",
+      "ScienceDirect",
+      "Springer Nature Link",
+      "PNAS",
+      "Frontiers"
+    ]
+  },
+  "methodology_notes": {
+    "search_approach": "Systematic searches used multiple query patterns: [compound] MCR methane ruminant, [compound] methane inhibition cattle sheep, compound category + methane inhibition",
+    "limitations": [
+      "Many compounds from AI-generated docking studies have not yet been synthesized or tested experimentally",
+      "Literature search focused on peer-reviewed publications and institutional repositories",
+      "Some compounds may have relevant research in specialized chemistry or veterinary databases not fully indexed by general search",
+      "Recent synthetic compounds generated by your MCR docking workflow are unlikely to have literature yet",
+      "Essential oil and phenolic compound research often shows variable results depending on dose, formulation, and animal conditions"
+    ],
+    "findings_reliability": {
+      "established_inhibitors": "High confidence - bromoform, 3-NOP, BES, lovastatin have extensive published research",
+      "natural_compounds": "Medium-high confidence - polyphenols, essential oils, fatty acids have published but sometimes variable results",
+      "novel_compounds": "Cannot confirm - compounds generated by your AI workflow are primarily in silico predictions and would require experimental validation"
+    }
+  },
+  "summary_statistics": {
+    "compounds_with_published_mcr_literature": 25,
+    "compounds_with_general_methane_literature": 15,
+    "compounds_without_specific_literature": 70,
+    "note": "The 70 compounds without specific literature likely include novel compounds from your docking studies, compounds that need experimental validation, and compounds that may have appeared in non-indexed sources"
+  },
+  "next_steps_recommendation": "For compounds without published literature, consider: (1) In vitro rumen fermentation assays to test methane inhibition, (2) Molecular docking validation against updated MCR crystal structures, (3) Chemical synthesis and purification for top candidates, (4) Microbial transcriptomics to elucidate mechanisms, (5) If promising, in vivo trials in ruminants. Focus first on compounds with strong binding affinities that differ structurally from known inhibitors."
+}

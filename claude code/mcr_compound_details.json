@@ -1,0 +1,279 @@
+{
+  "compound_database": {
+    "rank_1": {
+      "compound_name": "trans-(3R,5R)-3,5-bis[[(E)-3-(3,4-dihydroxyphenyl)prop-2-enoyl]oxy]-1,4-dihydroxycyclohexane-1-carboxylic acid",
+      "literature_status": "No literature found",
+      "classification": "Complex polyphenolic ester - likely based on caffeic/dihydroxycinnamic acid scaffolds",
+      "structural_notes": "Novel compound, AI-generated docking candidate"
+    },
+    "rank_2": {
+      "compound_name": "Lovastatin",
+      "literature_status": "Extensively published MCR inhibition literature",
+      "key_studies": "Inhibited methanogenesis in sheep (55% high dose), goats (33-39%), cattle (37% low-dose)",
+      "mechanism": "HMG-CoA reductase inhibitor affecting polyprenol biosynthesis in archaeal membranes",
+      "in_vivo_status": "Confirmed effective in cattle, sheep, goats",
+      "binding_affinity_literature": "-9.6 kcal/mol in your docking study matches known activity",
+      "species_tested": "Sheep, goats, cattle"
+    },
+    "rank_3": {
+      "compound_name": "[(1S,3R,7S,8S,8aR)-8-[2-[(2R,4R)-4-hydroxy-6-oxooxan-2-yl]ethyl]-3,7-dimethyl-1,2,3,7,8,8a-hexahydronaphthalen-1-yl] 2,2-dimethylbutanoate",
+      "literature_status": "No literature found",
+      "classification": "Modified lovastatin analog - likely more potent HMG-CoA reductase inhibitor",
+      "structural_notes": "2,2-dimethylbutanoate ester modification, AI-generated variant"
+    },
+    "rank_4": {
+      "compound_name": "(1E,4E)-1,5-bis(4-hydroxyphenyl)penta-1,4-dien-3-one",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Polyphenolic compound - trans-chalcone derivative",
+      "structural_notes": "Related to natural compounds in plant polyphenol research"
+    },
+    "rank_5": {
+      "compound_name": "(2R)-3-(3,4-dihydroxyphenyl)-2-[(E)-3-[2-[(E)-2-(3,4-dihydroxyphenyl)ethenyl]-3,4-dihydroxyphenyl]prop-2-enoyl]oxypropanoic acid",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Complex caffeic acid derivative",
+      "structural_notes": "Dimer-like structure of hydroxycinnamic acids, novel compound"
+    },
+    "rank_6": {
+      "compound_name": "(4S)-1-methyl-4-(6-methylhepta-1,5-dien-2-yl)cyclohexene",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Terpene (monoterpene derivative)",
+      "structural_notes": "Related to limonene and other monoterpenes"
+    },
+    "rank_7": {
+      "compound_name": "(1R,3R,4S,5R)-3,4-bis[[(E)-3-(3,4-dihydroxyphenyl)prop-2-enoyl]oxy]-1,5-dihydroxycyclohexane-1-carboxylic acid",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Caffeic acid derivative on cyclohexane scaffold",
+      "structural_notes": "Sugar alcohol + polyphenol hybrid, novel compound"
+    },
+    "rank_8": {
+      "compound_name": "(2S,3R,4S,5S,6R)-2-[3-[(E)-2-(3,4-dihydroxyphenyl)ethenyl]-5-hydroxyphenyl]oxane-3,4,5-triol",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Polyphenolic glycoside (similar to quercetin or catechin glycosides)",
+      "structural_notes": "Sugar conjugate of polyphenol, may improve bioavailability"
+    },
+    "rank_10": {
+      "compound_name": "5,7-dihydroxy-2-(3-hydroxy-4-methoxyphenyl)chromen-4-one",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Flavonoid (similar to hesperidin or hesperetin)",
+      "structural_notes": "Natural flavonoid structure"
+    },
+    "rank_11": {
+      "compound_name": "3-[(E)-3-(3,4-dihydroxyphenyl)prop-2-enoyl]oxy-1,4,5-trihydroxycyclohexane-1-carboxylic acid",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Caffeic acid derivative",
+      "structural_notes": "Similar to compounds in your docking study, polyphenol-based"
+    },
+    "rank_12": {
+      "compound_name": "PubChem CID: None",
+      "literature_status": "Cannot assess",
+      "notes": "Unidentified compound in dataset"
+    },
+    "rank_13": {
+      "compound_name": "PubChem CID: None",
+      "literature_status": "Cannot assess",
+      "notes": "Unidentified compound - polyphenolic triphenol pattern"
+    },
+    "rank_14": {
+      "compound_name": "1-methyl-4-(6-methylhepta-2,5-dien-2-yl)cyclohexene",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Terpene (similar to limonene isomers)",
+      "structural_notes": "Monoterpene with methyl branch"
+    },
+    "rank_15": {
+      "compound_name": "non-2-enoic acid",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Unsaturated fatty acid (C9)",
+      "structural_notes": "Short-to-medium chain fatty acid"
+    },
+    "rank_23": {
+      "compound_name": "Capric acid",
+      "literature_status": "Published methane inhibition literature",
+      "mechanism": "Antibacterial, antifungal, antiprotozoal; causes K+ leakage from methanogens",
+      "in_vitro_status": "Confirmed to decrease methane in rumen fermentation",
+      "research_status": "Multiple studies on MCFA methane inhibition"
+    },
+    "rank_35": {
+      "compound_name": "Citral",
+      "literature_status": "Limited MCR-specific data, general essential oil research available",
+      "classification": "Monoterpene aldehyde (geranial + neral)",
+      "mechanism": "General terpenoid methane inhibition mechanisms",
+      "notes": "Component of lemongrass, lemon oils; needs specific MCR testing"
+    },
+    "rank_36": {
+      "compound_name": "hexadecanoic acid",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Long-chain saturated fatty acid (palmitic acid, C16)",
+      "structural_notes": "May have different methanogen effects than medium-chain"
+    },
+    "rank_43": {
+      "compound_name": "Capric acid",
+      "literature_status": "Published methane inhibition literature",
+      "duplicate_note": "This is a second occurrence of Capric acid in the dataset"
+    },
+    "rank_44": {
+      "compound_name": "dodecanoic acid",
+      "literature_status": "Published as Lauric acid (C12)",
+      "mechanism": "Direct methanogen inhibition + antiprotozoal",
+      "literature": "Extensively studied medium-chain fatty acid",
+      "species_tested": "In vitro rumen systems; transcriptome studies"
+    },
+    "rank_55": {
+      "compound_name": "heptanoic acid",
+      "literature_status": "No specific MCR literature found",
+      "classification": "Medium-chain fatty acid (C7)",
+      "related_compounds": "Related to capric (C10) and lauric (C12) acids"
+    },
+    "rank_56": {
+      "compound_name": "(2Z)-3,7-dimethylocta-2,6-dienal",
+      "literature_status": "No MCR-specific literature found",
+      "classification": "Terpene aldehyde isomer",
+      "structural_notes": "Geranial/neral isomer or related compound"
+    },
+    "rank_86": {
+      "compound_name": "Eugenol",
+      "literature_status": "Published methane inhibition literature",
+      "mechanism": "Essential oil compound; likely protozoal inhibition",
+      "effectiveness": "30 µL reduces methane in vitro; variable in vivo results",
+      "notes": "Mixed results depending on dose and context"
+    },
+    "rank_86_duplicate": {
+      "compound_name": "Eugenol",
+      "literature_status": "Published",
+      "duplicate_note": "Appears twice in dataset"
+    },
+    "rank_111": {
+      "compound_name": "Limonene",
+      "literature_status": "Published as monoterpene with general MCR activity",
+      "classification": "Monoterpene (main component of citrus oils)",
+      "mechanism": "Terpenoid methane inhibition; dose-dependent",
+      "notes": "Moderate methane reduction with minimal fermentation impact"
+    },
+    "rank_115": {
+      "compound_name": "p-cymene",
+      "literature_status": "Published as monoterpene",
+      "classification": "Monoterpene (4-isopropyltoluene)",
+      "source": "Found in essential oils (thyme, cumin, oregano)",
+      "mechanism": "Terpenoid methane inhibition mechanisms"
+    },
+    "rank_131": {
+      "compound_name": "benzoic acid",
+      "literature_status": "No specific MCR literature found",
+      "classification": "Simple aromatic carboxylic acid",
+      "related_compounds": "Part of aromatic acid family studied for ruminant effects"
+    },
+    "rank_176": {
+      "compound_name": "Bromoform",
+      "literature_status": "Extensively published as potent MCR inhibitor",
+      "mechanism": "Halogenated methane analog; binds reduced B12, inhibits cobalamin-dependent methyltransferase",
+      "effectiveness": "94% methane yield reduction at optimal doses (50-60 mg/kg DM)",
+      "in_vivo_status": "Confirmed in beef and dairy cattle",
+      "source": "Seaweed Asparagopsis taxiformis",
+      "key_limitation": "Highly volatile; transient effect; requires stabilization"
+    },
+    "rank_175": {
+      "compound_name": "dibromomethane",
+      "literature_status": "Published MCR inhibition literature",
+      "mechanism": "MCR inhibitor; longer half-life than bromoform (775 vs 26 min)",
+      "effectiveness": "Sigmoidal dose-response at 1-2 µM",
+      "formation": "Degradation product of bromoform in rumen",
+      "notes": "May persist longer than parent compound"
+    },
+    "rank_174": {
+      "compound_name": "dibromo(dideuterio)methane",
+      "literature_status": "No specific literature found",
+      "classification": "Isotopically labeled bromoform analog",
+      "structural_notes": "Deuterium substitution; likely similar MCR activity to bromoform"
+    },
+    "rank_179": {
+      "compound_name": "iodoform",
+      "literature_status": "Published MCR inhibition literature",
+      "mechanism": "Halomethane MCR inhibitor",
+      "advantage": "Potentially fewer carcinogenic concerns than bromoform",
+      "metabolism": "Studied for absorption and excretory pathways in dairy cows",
+      "status": "Emerging alternative to bromoform"
+    },
+    "rank_177": {
+      "compound_name": "tribromo(113C)methane",
+      "literature_status": "No specific literature found",
+      "classification": "Isotopically labeled bromoform",
+      "structural_notes": "Carbon-13 labeled; used for tracking studies"
+    },
+    "rank_178": {
+      "compound_name": "tribromo(deuterio)methane",
+      "literature_status": "No specific literature found",
+      "classification": "Isotopically labeled bromoform",
+      "structural_notes": "Deuterium labeled; used for tracking studies"
+    }
+  },
+  "compound_categories_summary": {
+    "established_MCR_inhibitors_with_literature": [
+      "Lovastatin",
+      "Bromoform",
+      "Dibromomethane",
+      "Iodoform",
+      "3-Nitrooxypropanol (3-NOP, Bovaer)",
+      "Bromoethane sulfonate (BES)",
+      "Salvianolic acid C",
+      "Capric acid (Decanoic acid)",
+      "Lauric acid (Dodecanoic acid)"
+    ],
+    "essential_oils_with_general_methane_data": [
+      "Eugenol",
+      "Citral",
+      "Limonene",
+      "p-Cymene",
+      "Cinnamaldehyde",
+      "Terpenes (general class)"
+    ],
+    "polyphenolic_compounds_with_literature": [
+      "Caffeic acid",
+      "Ferulic acid",
+      "p-Coumaric acid",
+      "Polyphenols (general)",
+      "Tannins (condensed and hydrolyzable)"
+    ],
+    "fatty_acids_with_literature": [
+      "Capric acid (C10)",
+      "Lauric acid (C12)",
+      "Heptanoic acid (C7)",
+      "Medium-chain fatty acids (general)"
+    ],
+    "compounds_needing_experimental_validation": [
+      "Most novel polyphenolic derivatives with complex scaffolds",
+      "Most AI-generated docking candidates",
+      "Compounds without published peer-reviewed studies",
+      "Isotopically labeled variants"
+    ]
+  },
+  "ranking_observations": {
+    "top_20_compounds": "Most are polyphenolic derivatives with strong computational docking scores (-9.7 to -7.0 kcal/mol) but limited or no published MCR inhibition literature. Top performers from literature (Bromoform, 3-NOP) appear lower in your ranking, suggesting your docking model may weight different binding pocket interactions.",
+    "binding_affinity_correlation": "Your highest-scoring compound (-9.7: trans-caffeate ester) ranks higher than Lovastatin (-9.6) and Bromoform (rank 176). This suggests either: (1) Novel compounds may have superior binding, (2) Computational and experimental activity don't perfectly correlate, or (3) Synthetic accessibility/bioavailability differs between compounds.",
+    "known_inhibitors_positions": {
+      "Lovastatin": "Rank 2 (-9.6)",
+      "Bromoform": "Rank 176 (-3.2)",
+      "Capric acid": "Rank 23 (-7.6)",
+      "Eugenol": "Rank 86 (-6.6)",
+      "Limonene": "Rank 111 (-6.2)",
+      "p-cymene": "Rank 115 (-6.2)"
+    }
+  },
+  "recommendations_for_prioritization": {
+    "immediate_testing_candidates": [
+      "Rank 1-5 compounds: Novel polyphenolic derivatives with highest binding affinity - request synthesis and in vitro MCR assay",
+      "Salvianolic acid C analogs: If SAC is proven effective, test structural variants in same binding range",
+      "Top 20 compounds: Test in in vitro rumen fermentation before in vivo studies"
+    ],
+    "medium_priority": [
+      "Compounds 21-100: Screen computationally against updated MCR crystal structures (2024-2025)",
+      "Check for chemical synthesis feasibility - may not be commercially available",
+      "Test synthetic accessibility and cost"
+    ],
+    "experimental_validation_pipeline": [
+      "1. In vitro MCR enzyme assay (recombinant or purified)",
+      "2. In vitro rumen fermentation with methane measurement",
+      "3. Ruminal transcriptomics (mcrA, rnfC gene expression)",
+      "4. Microbial community analysis (Methanobrevibacter abundance)",
+      "5. In vivo cattle trial if in vitro promising (dose, duration, methane reduction %)"
+    ]
+  }
+}
